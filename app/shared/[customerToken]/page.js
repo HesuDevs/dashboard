@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { use } from 'react';
+import * as XLSX from 'xlsx';
 
 export default function SharedCustomerDashboard({ params }) {
 
@@ -101,9 +102,8 @@ export default function SharedCustomerDashboard({ params }) {
     return statusColors[status] || 'bg-gray-100 text-gray-600';
   };
 
-  // Column IDs from sample.json
+  // Updated columnMapping without Shipment Order
   const columnMapping = {
-    'Shipment Order': 3404207790811012,
     'Cargo Type': 3435349965334404,
     'Tonnage': 160862603896708,
     'Container Number': 3820037301135236,
@@ -114,6 +114,39 @@ export default function SharedCustomerDashboard({ params }) {
     'Current Location': 8605111905216388,
     'Destination': 4101512277845892,
     'Trip Start Date': 6353312091531140,
+  };
+
+  // Add this new function to handle Excel export
+  const exportToExcel = () => {
+    // Create data array for Excel
+    const excelData = filteredRows.map(row => {
+      const rowData = {};
+      visibleColumns.forEach(column => {
+        const cell = row.cells.find(c => c.columnId === column.id);
+        let value = cell?.displayValue || cell?.value || '-';
+        
+        // Format date if it's a date column
+        if (column.type === 'DATE' && value !== '-') {
+          value = new Date(value).toLocaleDateString();
+        }
+        
+        rowData[column.title] = value;
+      });
+      return rowData;
+    });
+
+    // Create worksheet
+    const ws = XLSX.utils.json_to_sheet(excelData);
+    
+    // Create workbook
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Shipments');
+
+    // Generate filename with current date
+    const fileName = `shipments_${new Date().toISOString().split('T')[0]}.xlsx`;
+
+    // Save file
+    XLSX.writeFile(wb, fileName);
   };
 
   if (loading) {
@@ -140,11 +173,32 @@ export default function SharedCustomerDashboard({ params }) {
 
   return (
     <div className="p-6 max-w-7xl mx-auto space-y-6">
-      <div className="flex items-center space-x-4">
+      <div className="flex justify-between items-center">
         <div>
           <h2 className="text-2xl font-semibold text-gray-800">Shipment Status Dashboard</h2>
           <p className="text-sm text-gray-500">Showing {filteredRows.length} shipments</p>
         </div>
+        
+        {/* Add Export Button */}
+        <button
+          onClick={exportToExcel}
+          className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center space-x-2"
+        >
+          <svg 
+            className="w-5 h-5" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="2" 
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+            />
+          </svg>
+          <span>Export to Excel</span>
+        </button>
       </div>
 
       {/* Status Cards Grid */}
@@ -172,8 +226,8 @@ export default function SharedCustomerDashboard({ params }) {
         })}
       </div>
 
-      {/* Search Bar */}
-      <div className="flex justify-end">
+      {/* Update the search bar container to include both search and export */}
+      <div className="flex justify-between items-center">
         <div className="relative">
           <input
             type="text"
