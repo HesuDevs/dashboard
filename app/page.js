@@ -9,11 +9,32 @@ export default function Login() {
     email: '',
     password: '',
   });
+  const [error, setError] = useState('');
+
+  const validCredentials = [
+    {
+      email: 'elvin.kakomo@hesu.co.tz',
+      password: 'Hesu@2021'
+    },
+    {
+      email: 'gain.tawodzera@hesu.co.tz',
+      password: 'Hesu@2021'
+    }
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Implement actual authentication
-    router.push('/home');
+    setError(''); // Clear any previous errors
+
+    const isValidUser = validCredentials.some(
+      cred => cred.email === formData.email && cred.password === formData.password
+    );
+
+    if (isValidUser) {
+      router.push('/home');
+    } else {
+      setError('Invalid email or password');
+    }
   };
 
   return (
@@ -21,7 +42,7 @@ export default function Login() {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="flex justify-center">
           <Image
-            src="/logo.png" // Add your logo
+            src="/logo.png"
             alt="Hesu Logo"
             width={100}
             height={100}
@@ -36,6 +57,11 @@ export default function Login() {
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit}>
+            {error && (
+              <div className="bg-red-50 text-red-500 p-3 rounded-md text-sm">
+                {error}
+              </div>
+            )}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Email address
@@ -71,6 +97,7 @@ export default function Login() {
                 />
               </div>
             </div>
+
             <div>
               <button
                 type="submit"

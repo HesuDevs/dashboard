@@ -6,9 +6,9 @@ export default function Header() {
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-blue-500 rounded-full text-white flex items-center justify-center">
-              EK
+              HE
             </div>
-            <span className="text-gray-600">Elvin Kakomo</span>
+            <span className="text-gray-600">Hesu</span>
           </div>
         </div>
       </div>
