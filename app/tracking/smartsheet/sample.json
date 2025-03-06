@@ -1,0 +1,6202 @@
+{
+	"id": 7613454455465860,
+	"name": "Transit Fleet A",
+	"version": 3762,
+	"totalRowCount": 48,
+	"accessLevel": "OWNER",
+	"effectiveAttachmentOptions": [
+		"FILE",
+		"DROPBOX",
+		"ONEDRIVE",
+		"EGNYTE",
+		"GOOGLE_DRIVE",
+		"EVERNOTE",
+		"BOX_COM",
+		"LINK"
+	],
+	"ganttEnabled": false,
+	"dependenciesEnabled": false,
+	"resourceManagementEnabled": false,
+	"resourceManagementType": "NONE",
+	"cellImageUploadEnabled": true,
+	"userSettings": {
+		"criticalPathEnabled": false,
+		"displaySummaryTasks": true
+	},
+	"userPermissions": {
+		"summaryPermissions": "ADMIN"
+	},
+	"hasSummaryFields": false,
+	"permalink": "https://app.smartsheet.com/sheets/gQchmxgM8mjXFxj8V2CpCcH93FPwh4cQwmq3Hw31",
+	"createdAt": "2022-12-15T10:25:15Z",
+	"modifiedAt": "2025-02-26T09:59:14Z",
+	"isMultiPicklistEnabled": true,
+	"columns": [
+		{
+			"id": 3404207790811012,
+			"version": 0,
+			"index": 0,
+			"title": "Shipment Order",
+			"type": "TEXT_NUMBER",
+			"primary": true,
+			"validation": false,
+			"width": 86
+		},
+		{
+			"id": 3435349965334404,
+			"version": 0,
+			"index": 1,
+			"title": "Cargo Type",
+			"type": "PICKLIST",
+			"options": [
+				"Copper",
+				"Sulphur"
+			],
+			"validation": false,
+			"width": 107
+		},
+		{
+			"id": 160862603896708,
+			"version": 0,
+			"index": 2,
+			"title": "Tonnage",
+			"type": "TEXT_NUMBER",
+			"validation": false,
+			"width": 77
+		},
+		{
+			"id": 8323636928505732,
+			"version": 0,
+			"index": 3,
+			"title": "BL Number",
+			"type": "TEXT_NUMBER",
+			"validation": false,
+			"width": 100
+		},
+		{
+			"id": 3820037301135236,
+			"version": 0,
+			"index": 4,
+			"title": "Container Number",
+			"type": "TEXT_NUMBER",
+			"validation": false,
+			"width": 136
+		},
+		{
+			"id": 6071837114820484,
+			"version": 0,
+			"index": 5,
+			"title": "Size",
+			"type": "PICKLIST",
+			"options": [
+				"20FT",
+				"40FT",
+				"Loose Cargo"
+			],
+			"validation": false,
+			"width": 82
+		},
+		{
+			"id": 1568237487449988,
+			"version": 0,
+			"index": 6,
+			"title": "Client Name",
+			"type": "PICKLIST",
+			"options": [
+				"Polytria Africa",
+				"Poseidon Logistics",
+				"Reload Logistics",
+				"Somika SAS"
+			],
+			"validation": false,
+			"width": 225
+		},
+		{
+			"id": 7197737021663108,
+			"version": 0,
+			"index": 7,
+			"title": "Truck Number",
+			"type": "TEXT_NUMBER",
+			"validation": false,
+			"width": 74
+		},
+		{
+			"id": 2694137394292612,
+			"version": 0,
+			"index": 8,
+			"title": "Trailer Number",
+			"type": "TEXT_NUMBER",
+			"validation": false,
+			"width": 115
+		},
+		{
+			"id": 4945937207977860,
+			"version": 0,
+			"index": 9,
+			"title": "Driver Name",
+			"type": "TEXT_NUMBER",
+			"validation": false,
+			"width": 186
+		},
+		{
+			"id": 442337580607364,
+			"version": 0,
+			"index": 10,
+			"title": "Truck Status",
+			"type": "PICKLIST",
+			"options": [
+				"Waiting to Load",
+				"Loaded Waiting for Dispatch",
+				"Moving Loaded",
+				"Waiting for Import Clearance",
+				"Waiting for RIT Clearance",
+				"Waiting for Export Clearance",
+				"Waiting to Offload",
+				"Delivered",
+				"Moving Empty",
+				"Minor Breakdown",
+				"Workshop - Awaiting facilities"
+			],
+			"validation": false,
+			"width": 170
+		},
+		{
+			"id": 8605111905216388,
+			"version": 0,
+			"index": 11,
+			"title": "Current Location",
+			"type": "TEXT_NUMBER",
+			"validation": false,
+			"width": 148
+		},
+		{
+			"id": 4101512277845892,
+			"version": 0,
+			"index": 12,
+			"title": "Destination",
+			"type": "TEXT_NUMBER",
+			"validation": false,
+			"width": 178
+		},
+		{
+			"id": 6353312091531140,
+			"version": 0,
+			"index": 13,
+			"title": "Trip Start Date",
+			"type": "DATE",
+			"validation": false,
+			"width": 62
+		},
+		{
+			"id": 1849712464160644,
+			"version": 0,
+			"index": 14,
+			"title": "Loading Location Arrival Date",
+			"type": "DATE",
+			"validation": false,
+			"width": 125
+		},
+		{
+			"id": 7479211998373764,
+			"version": 0,
+			"index": 15,
+			"title": "Actual Loading Date",
+			"type": "DATE",
+			"validation": false,
+			"width": 78
+		},
+		{
+			"id": 2975612371003268,
+			"version": 0,
+			"index": 16,
+			"title": "Dispatch Date",
+			"type": "DATE",
+			"validation": false,
+			"width": 81
+		},
+		{
+			"id": 5227412184688516,
+			"version": 0,
+			"index": 17,
+			"title": "Estimated Delivery Date",
+			"type": "DATE",
+			"validation": false,
+			"width": 84
+		},
+		{
+			"id": 723812557318020,
+			"version": 0,
+			"index": 18,
+			"title": "Border Crossing Details",
+			"type": "TEXT_NUMBER",
+			"validation": false,
+			"width": 229
+		},
+		{
+			"id": 8042161951795076,
+			"version": 0,
+			"index": 19,
+			"title": "Delivery Location Arrival Date",
+			"type": "DATE",
+			"validation": false,
+			"width": 90
+		},
+		{
+			"id": 3538562324424580,
+			"version": 0,
+			"index": 20,
+			"title": "Actual Delivery Date",
+			"type": "DATE",
+			"validation": false,
+			"width": 108
+		},
+		{
+			"id": 5790362138109828,
+			"version": 0,
+			"index": 21,
+			"title": "Trip End Date",
+			"type": "DATE",
+			"validation": false,
+			"width": 69
+		},
+		{
+			"id": 2412662417581956,
+			"version": 0,
+			"index": 22,
+			"title": "Remarks",
+			"type": "TEXT_NUMBER",
+			"validation": false,
+			"width": 362
+		},
+		{
+			"id": 1286762510739332,
+			"version": 0,
+			"index": 23,
+			"title": "Standing Days",
+			"type": "TEXT_NUMBER",
+			"validation": false,
+			"width": 200
+		},
+		{
+			"id": 6916262044952452,
+			"version": 0,
+			"index": 24,
+			"title": "Standing Charges",
+			"type": "TEXT_NUMBER",
+			"validation": false,
+			"width": 78
+		},
+		{
+			"id": 4664462231267204,
+			"version": 0,
+			"index": 25,
+			"title": "Transporter",
+			"type": "PICKLIST",
+			"options": [
+				"Hesu Investment Ltd"
+			],
+			"validation": false,
+			"width": 124
+		}
+	],
+	"rows": [
+		{
+			"id": 1779354061508484,
+			"rowNumber": 1,
+			"expanded": true,
+			"createdAt": "2025-01-08T09:46:08Z",
+			"modifiedAt": "2025-02-26T09:19:03Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3282,
+					"displayValue": "3282"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Sulphur",
+					"displayValue": "Sulphur"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 31,
+					"displayValue": "31"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T308DSY",
+					"displayValue": "T308DSY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T847EGV",
+					"displayValue": "T847EGV"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "RICHARD JULIUS SAMWALI",
+					"displayValue": "RICHARD JULIUS SAMWALI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Delivered",
+					"displayValue": "Delivered"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "TFM-KOLWEZI-DRC",
+					"displayValue": "TFM-KOLWEZI-DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "TFM-KOLWEZI-DRC",
+					"displayValue": "TFM-KOLWEZI-DRC"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-07"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-07"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-08"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-01-10"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-01"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Tunduma IN - 17/01/25\nTunduma OUT -21/01/25\n\nNakonde IN - 21/01/25\nNakonde OUT - 23/01/25\n\nKasumbalesa ZM IN - 26/01/25\nKasumbalesa ZM OUT - 02/02/25\n\nKasumbalesa DRC IN - 02/02/25\nKasumbalesa DRC OUT - 03/02/25\n\nWhiskey IN - 03/02/25\nWhiskey OUT -03/02/25",
+					"displayValue": "Tunduma IN - 17/01/25\nTunduma OUT -21/01/25\n\nNakonde IN - 21/01/25\nNakonde OUT - 23/01/25\n\nKasumbalesa ZM IN - 26/01/25\nKasumbalesa ZM OUT - 02/02/25\n\nKasumbalesa DRC IN - 02/02/25\nKasumbalesa DRC OUT - 03/02/25\n\nWhiskey IN - 03/02/25\nWhiskey OUT -03/02/25"
+				},
+				{
+					"columnId": 8042161951795076,
+					"value": "2025-02-04"
+				},
+				{
+					"columnId": 3538562324424580,
+					"value": "2025-02-11"
+				},
+				{
+					"columnId": 5790362138109828,
+					"value": "2025-02-11"
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "07.01.25 - Trucks arrival Zambia cargo\n07.01.25 - Truck  waiting to load\n08.01.25 - Truck loaded and waiting for  Dispatch\n10.01.25 - Truck Dispatch\n11.01.25 - Truck enroute to Tunduma border\n14.01.25 - Minor Breakdown\n17/01/25 - Truck arrival Tunduma border Under RIT clearance\n21/01/25 - Cross to Nakonde, Zambia side\n23/01/25 - Cleared and Moving\n26/01/25 - Under RIT clearance at kasumbalesa zambia side\n02/02/25 - Under import clearance at Kasumbalesa DRC side\n03/02/25 - Truck Enter whiskey for Import Clearance\n03/02/25 - Truck Enroute to Offloading location\n04/02/25 - Truck waiting to offload at TFM mine\n11/02/25 - Delivered",
+					"displayValue": "07.01.25 - Trucks arrival Zambia cargo\n07.01.25 - Truck  waiting to load\n08.01.25 - Truck loaded and waiting for  Dispatch\n10.01.25 - Truck Dispatch\n11.01.25 - Truck enroute to Tunduma border\n14.01.25 - Minor Breakdown\n17/01/25 - Truck arrival Tunduma border Under RIT clearance\n21/01/25 - Cross to Nakonde, Zambia side\n23/01/25 - Cleared and Moving\n26/01/25 - Under RIT clearance at kasumbalesa zambia side\n02/02/25 - Under import clearance at Kasumbalesa DRC side\n03/02/25 - Truck Enter whiskey for Import Clearance\n03/02/25 - Truck Enroute to Offloading location\n04/02/25 - Truck waiting to offload at TFM mine\n11/02/25 - Delivered"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 6282273516949380,
+			"rowNumber": 2,
+			"siblingId": 1779354061508484,
+			"expanded": true,
+			"createdAt": "2025-01-23T09:44:25Z",
+			"modifiedAt": "2025-02-26T09:19:03Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3307,
+					"displayValue": "3307"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 31,
+					"displayValue": "31"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Polytria africa",
+					"displayValue": "Polytria africa"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T858EAY",
+					"displayValue": "T858EAY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T874EAY",
+					"displayValue": "T874EAY"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "GERALD MESHACK MANZILANZI",
+					"displayValue": "GERALD MESHACK MANZILANZI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Delivered",
+					"displayValue": "Delivered"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-15"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-16"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-17"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 03/02/25\nKasumablesa DRC OUT -04/02/25\n\nKasumbalesa ZM IN -04/02/25\nKasumbalesa ZM OUT -05/02/25\n\nNakonde IN - 07/02/25\nNakonde OUT -08/02/25\n\nTunduma IN -08/02/25\nTunduma OUT -12/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 03/02/25\nKasumablesa DRC OUT -04/02/25\n\nKasumbalesa ZM IN -04/02/25\nKasumbalesa ZM OUT -05/02/25\n\nNakonde IN - 07/02/25\nNakonde OUT -08/02/25\n\nTunduma IN -08/02/25\nTunduma OUT -12/02/25"
+				},
+				{
+					"columnId": 8042161951795076,
+					"value": "2025-02-14"
+				},
+				{
+					"columnId": 3538562324424580,
+					"value": "2025-02-17"
+				},
+				{
+					"columnId": 5790362138109828,
+					"value": "2025-02-17"
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "16.01.25 - Trucks arrival TCC MINE\n16.01.25 - Truck  waiting to load\n17.01.25 - Truck loaded waiting for Dispatch\n30.01.25 - Truck Dispatch\n31.01.25 - Truck enroute to kasumbalesa\n03.02.25 - In queue to Kasumbalesa\n03.02.25 - Truck under RIT clearance kasumbalesa DRC\n04.02.25 - Truck under export clearance kasumbalesa zambia\n05.02.25 - Truck enroute to Nakonde\n07.02.25 - Truck arrival at Nakonde under RIT clearance\n08.02.25 - Truck under RIT clearance at Tunduma Tanzania\n12/02/25 - Truck Enroute to Offloading location\n14/02/25 - Truck waiting to offload at AFICD(Mchicha)\n17.02.25 - Delivered",
+					"displayValue": "16.01.25 - Trucks arrival TCC MINE\n16.01.25 - Truck  waiting to load\n17.01.25 - Truck loaded waiting for Dispatch\n30.01.25 - Truck Dispatch\n31.01.25 - Truck enroute to kasumbalesa\n03.02.25 - In queue to Kasumbalesa\n03.02.25 - Truck under RIT clearance kasumbalesa DRC\n04.02.25 - Truck under export clearance kasumbalesa zambia\n05.02.25 - Truck enroute to Nakonde\n07.02.25 - Truck arrival at Nakonde under RIT clearance\n08.02.25 - Truck under RIT clearance at Tunduma Tanzania\n12/02/25 - Truck Enroute to Offloading location\n14/02/25 - Truck waiting to offload at AFICD(Mchicha)\n17.02.25 - Delivered"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 4030473703264132,
+			"rowNumber": 3,
+			"siblingId": 6282273516949380,
+			"expanded": true,
+			"createdAt": "2025-01-23T09:44:25Z",
+			"modifiedAt": "2025-02-26T09:19:03Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3309,
+					"displayValue": "3309"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 31,
+					"displayValue": "31"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Polytria africa",
+					"displayValue": "Polytria africa"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T890EJX",
+					"displayValue": "T890EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T850EGV",
+					"displayValue": "T850EGV"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "JAFARI AYUBU SIMBA",
+					"displayValue": "JAFARI AYUBU SIMBA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Delivered",
+					"displayValue": "Delivered"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-15"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-16"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-17"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 03/02/25\nKasumablesa DRC OUT - 04/02/25\n\nKasumbalesa ZM IN -04/02/25\nKasumbalesa ZM OUT -05/02/25\n\nNakonde IN - 07/02/25\nNakonde OUT -08/02/25\n\nTunduma IN -08/02/25\nTunduma OUT -12/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 03/02/25\nKasumablesa DRC OUT - 04/02/25\n\nKasumbalesa ZM IN -04/02/25\nKasumbalesa ZM OUT -05/02/25\n\nNakonde IN - 07/02/25\nNakonde OUT -08/02/25\n\nTunduma IN -08/02/25\nTunduma OUT -12/02/25"
+				},
+				{
+					"columnId": 8042161951795076,
+					"value": "2025-02-14"
+				},
+				{
+					"columnId": 3538562324424580,
+					"value": "2025-02-15"
+				},
+				{
+					"columnId": 5790362138109828,
+					"value": "2025-02-15"
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "16.01.25 - Trucks arrival TCC MINE\n16.01.25 - Truck  waiting to load\n17.01.25 - Truck loaded waiting for Dispatch\n30.01.25 - Truck Dispatch\n31.01.25 - Truck enroute to kasumbalesa\n03.02.25 - In queue to Kasumbalesa\n03.02.25 - Truck under RIT clearance kasumbalesa DRC\n04.02.25 - Truck under export clearance kasumbalesa zambia\n05.02.25 - Truck enroute to Nakonde\n07.02.25 - Truck arrival at Nakonde under RIT clearance\n08.02.25 - Truck under RIT clearance at Tunduma Tanzania\n12.02.25 - Truck Enroute to Offloading location\n14.02.25 - Truck waiting to offload at AFICD(Mchicha)\n15.02.25 - Delivered",
+					"displayValue": "16.01.25 - Trucks arrival TCC MINE\n16.01.25 - Truck  waiting to load\n17.01.25 - Truck loaded waiting for Dispatch\n30.01.25 - Truck Dispatch\n31.01.25 - Truck enroute to kasumbalesa\n03.02.25 - In queue to Kasumbalesa\n03.02.25 - Truck under RIT clearance kasumbalesa DRC\n04.02.25 - Truck under export clearance kasumbalesa zambia\n05.02.25 - Truck enroute to Nakonde\n07.02.25 - Truck arrival at Nakonde under RIT clearance\n08.02.25 - Truck under RIT clearance at Tunduma Tanzania\n12.02.25 - Truck Enroute to Offloading location\n14.02.25 - Truck waiting to offload at AFICD(Mchicha)\n15.02.25 - Delivered"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 8534073330634628,
+			"rowNumber": 4,
+			"siblingId": 4030473703264132,
+			"expanded": true,
+			"createdAt": "2025-01-23T09:44:25Z",
+			"modifiedAt": "2025-02-26T09:19:03Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3308,
+					"displayValue": "3308"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 31,
+					"displayValue": "31"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Polytria africa",
+					"displayValue": "Polytria africa"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T339EGG",
+					"displayValue": "T339EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T271EDS",
+					"displayValue": "T271EDS"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "HAMISI AMINI MSUMARI",
+					"displayValue": "HAMISI AMINI MSUMARI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Delivered",
+					"displayValue": "Delivered"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-15"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-16"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-17"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 03/02/25\nKasumablesa DRC OUT - 04/02/25\n\nKasumbalesa ZM IN -04/02/25\nKasumbalesa ZM OUT -05/02/25\n\nNakonde IN - 07/02/25\nNakonde OUT -08/02/25\n\nTunduma IN -08/02/25\nTunduma OUT -12/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 03/02/25\nKasumablesa DRC OUT - 04/02/25\n\nKasumbalesa ZM IN -04/02/25\nKasumbalesa ZM OUT -05/02/25\n\nNakonde IN - 07/02/25\nNakonde OUT -08/02/25\n\nTunduma IN -08/02/25\nTunduma OUT -12/02/25"
+				},
+				{
+					"columnId": 8042161951795076,
+					"value": "2025-02-14"
+				},
+				{
+					"columnId": 3538562324424580,
+					"value": "2025-02-17"
+				},
+				{
+					"columnId": 5790362138109828,
+					"value": "2025-02-17"
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "16.01.25 - Trucks arrival TCC MINE\n16.01.25 - Truck  waiting to load\n17.01.25 - Truck loaded waiting for Dispatch\n30.01.25 - Truck Dispatch\n31.01.25 - Truck enroute to kasumbalesa\n03.02.25 - In queue to Kasumbalesa\n03.02.25 - Truck under RIT clearance kasumbalesa DRC\n04.02.25 - Truck under export clearance kasumbalesa zambia\n05.02.25 - Truck enroute to Nakonde\n07.02.25 - Truck arrival at Nakonde under RIT clearance\n08.02.25 - Truck under RIT clearance at Tunduma Tanzania\n12/02/25 - Truck Enroute to Offloading location\n14/02/25 - Truck waiting to offload at AFICD(Mchicha)\n17.02.25 - Delivered",
+					"displayValue": "16.01.25 - Trucks arrival TCC MINE\n16.01.25 - Truck  waiting to load\n17.01.25 - Truck loaded waiting for Dispatch\n30.01.25 - Truck Dispatch\n31.01.25 - Truck enroute to kasumbalesa\n03.02.25 - In queue to Kasumbalesa\n03.02.25 - Truck under RIT clearance kasumbalesa DRC\n04.02.25 - Truck under export clearance kasumbalesa zambia\n05.02.25 - Truck enroute to Nakonde\n07.02.25 - Truck arrival at Nakonde under RIT clearance\n08.02.25 - Truck under RIT clearance at Tunduma Tanzania\n12/02/25 - Truck Enroute to Offloading location\n14/02/25 - Truck waiting to offload at AFICD(Mchicha)\n17.02.25 - Delivered"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 1541265417834372,
+			"rowNumber": 5,
+			"siblingId": 8534073330634628,
+			"expanded": true,
+			"createdAt": "2025-01-29T06:43:29Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Polytria africa",
+					"displayValue": "Polytria africa"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T321DSY",
+					"displayValue": "T321DSY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T843EGV",
+					"displayValue": "T843EGV"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "FRENKI WILLY MWANDEMBWA",
+					"displayValue": "FRENKI WILLY MWANDEMBWA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-28"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-31"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-19"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "28.01.25 - Truck on the way to loading Location\n29.01.25 - At kamoto mining waiting for agent to assist to cross\n30.01.25 - Trucks arrival Thomas Mining\n30.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n19.01.25 - Standing charge start apply\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "28.01.25 - Truck on the way to loading Location\n29.01.25 - At kamoto mining waiting for agent to assist to cross\n30.01.25 - Trucks arrival Thomas Mining\n30.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n19.01.25 - Standing charge start apply\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332,
+					"value": "1 Day",
+					"displayValue": "1 Day"
+				},
+				{
+					"columnId": 6916262044952452,
+					"value": 250,
+					"displayValue": "$250"
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 6044865045204868,
+			"rowNumber": 6,
+			"siblingId": 1541265417834372,
+			"expanded": true,
+			"createdAt": "2025-01-29T06:43:29Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Polytria africa",
+					"displayValue": "Polytria africa"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T314DSY",
+					"displayValue": "T314DSY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T852EGV",
+					"displayValue": "T852EGV"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "HAMAD JUMA MKWEPU",
+					"displayValue": "HAMAD JUMA MKWEPU"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-28"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-31"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-19"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "28.01.25 - Truck on the way to loading Location\n29.01.25 - At kamoto mining waiting for agent to assist to cross\n30.01.25 - Trucks arrival Thomas Mining\n30.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n19.01.25 - Standing charge start apply\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "28.01.25 - Truck on the way to loading Location\n29.01.25 - At kamoto mining waiting for agent to assist to cross\n30.01.25 - Trucks arrival Thomas Mining\n30.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n19.01.25 - Standing charge start apply\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332,
+					"value": "1 Day",
+					"displayValue": "1 Day"
+				},
+				{
+					"columnId": 6916262044952452,
+					"value": 250,
+					"displayValue": "$250"
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 3793065231519620,
+			"rowNumber": 7,
+			"siblingId": 6044865045204868,
+			"expanded": true,
+			"createdAt": "2025-01-29T06:43:29Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Polytria africa",
+					"displayValue": "Polytria africa"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T870EAY",
+					"displayValue": "T870EAY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T879EAY",
+					"displayValue": "T879EAY"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "HAMZA ABDALLAH NANDIWA",
+					"displayValue": "HAMZA ABDALLAH NANDIWA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-28"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-31"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-19"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "28.01.25 - Truck on the way to loading Location\n29.01.25 - At kamoto mining waiting for agent to assist to cross\n30.01.25 - Trucks arrival Thomas Mining\n30.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n19.01.25 - Standing charge start apply\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "28.01.25 - Truck on the way to loading Location\n29.01.25 - At kamoto mining waiting for agent to assist to cross\n30.01.25 - Trucks arrival Thomas Mining\n30.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n19.01.25 - Standing charge start apply\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332,
+					"value": "1 Day",
+					"displayValue": "1 Day"
+				},
+				{
+					"columnId": 6916262044952452,
+					"value": 250,
+					"displayValue": "$250"
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 8296664858890116,
+			"rowNumber": 8,
+			"siblingId": 3793065231519620,
+			"expanded": true,
+			"createdAt": "2025-01-29T06:43:29Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Polytria africa",
+					"displayValue": "Polytria africa"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T322DSY",
+					"displayValue": "T322DSY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T846EGV",
+					"displayValue": "T846EGV"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "DAMSON JULIUS DAMSON",
+					"displayValue": "DAMSON JULIUS DAMSON"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-28"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-31"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-19"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "28.01.25 - Truck on the way to loading Location\n29.01.25 - At kamoto mining waiting for agent to assist to cross\n30.01.25 - Trucks arrival Thomas Mining\n30.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n19.01.25 - Standing charge start apply\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "28.01.25 - Truck on the way to loading Location\n29.01.25 - At kamoto mining waiting for agent to assist to cross\n30.01.25 - Trucks arrival Thomas Mining\n30.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n19.01.25 - Standing charge start apply\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332,
+					"value": "1 Day",
+					"displayValue": "1 Day"
+				},
+				{
+					"columnId": 6916262044952452,
+					"value": 250,
+					"displayValue": "$250"
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 4400706757595012,
+			"rowNumber": 9,
+			"siblingId": 8296664858890116,
+			"expanded": true,
+			"createdAt": "2025-02-04T09:41:25Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Polytria africa",
+					"displayValue": "Polytria africa"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T311DSY",
+					"displayValue": "T311DSY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T851EGV",
+					"displayValue": "T851EGV"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "ELIAS PAUL NINGA",
+					"displayValue": "ELIAS PAUL NINGA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-03"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-04"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-04"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-19"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-02"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "03.02.25 - Truck on the way to loading Location\n04.02.25 - Trucks arrival Thomas Mining\n04.02.25 - Truck  waiting to load\n04.02.25 - Truck loaded waiting for Dispatch\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "03.02.25 - Truck on the way to loading Location\n04.02.25 - Trucks arrival Thomas Mining\n04.02.25 - Truck  waiting to load\n04.02.25 - Truck loaded waiting for Dispatch\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 108213362757508,
+			"rowNumber": 10,
+			"siblingId": 4400706757595012,
+			"expanded": true,
+			"createdAt": "2025-02-04T09:41:25Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Polytria africa",
+					"displayValue": "Polytria africa"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T859EAY",
+					"displayValue": "T859EAY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T884EAY",
+					"displayValue": "T884EAY"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "JOEL AMOS MBUGI",
+					"displayValue": "JOEL AMOS MBUGI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-03"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-04"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-04"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-19"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-02"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "03.02.25 - Truck on the way to loading Location\n04.02.25 - Trucks arrival Thomas Mining\n04.02.25 - Truck  waiting to load\n04.02.25 - Truck loaded waiting for Dispatch\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "03.02.25 - Truck on the way to loading Location\n04.02.25 - Trucks arrival Thomas Mining\n04.02.25 - Truck  waiting to load\n04.02.25 - Truck loaded waiting for Dispatch\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 8904306384965508,
+			"rowNumber": 11,
+			"siblingId": 108213362757508,
+			"expanded": true,
+			"createdAt": "2025-02-04T09:41:25Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Polytria africa",
+					"displayValue": "Polytria africa"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T319DSY",
+					"displayValue": "T319DSY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T849EGV",
+					"displayValue": "T849EGV"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "MFAUME ABILLAH",
+					"displayValue": "MFAUME ABILLAH"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-03"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-04"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-04"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-19"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-02"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "03.02.25 - Truck on the way to loading Location\n04.02.25 - Trucks arrival Thomas Mining\n04.02.25 - Truck  waiting to load\n04.02.25 - Truck loaded waiting for Dispatch\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "03.02.25 - Truck on the way to loading Location\n04.02.25 - Trucks arrival Thomas Mining\n04.02.25 - Truck  waiting to load\n04.02.25 - Truck loaded waiting for Dispatch\n19.02.25 - Truck Dispatch\n20.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 515317587251076,
+			"rowNumber": 12,
+			"siblingId": 8904306384965508,
+			"expanded": true,
+			"createdAt": "2025-01-29T12:45:36Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3319,
+					"displayValue": "3319"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T867EAY",
+					"displayValue": "T867EAY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T880EAY",
+					"displayValue": "T880EAY"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "HASSANI ABDU HATIBU",
+					"displayValue": "HASSANI ABDU HATIBU"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Delivered",
+					"displayValue": "Delivered"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 14/02/25\nKasumablesa DRC OUT -15/02/25\n\nKasumbalesa ZM IN -15/02/25\nKasumbalesa ZM OUT -15/02/25\n\nNakonde IN -17/02/25\nNakonde OUT -20/02/25\n\nTunduma IN -20/02/25\nTunduma OUT -22/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 14/02/25\nKasumablesa DRC OUT -15/02/25\n\nKasumbalesa ZM IN -15/02/25\nKasumbalesa ZM OUT -15/02/25\n\nNakonde IN -17/02/25\nNakonde OUT -20/02/25\n\nTunduma IN -20/02/25\nTunduma OUT -22/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n12.02.25 - Truck Dispatch\n13.02.25 - Truck enroute to kasumbalesa\n14.02.25 - Truck under RIT clearance kasumbalesa DRC\n15.02.25 - Truck under export clearance kasumbalesa zambia\n15.02.25 - Truck enroute to Nakonde\n17.02.25 - Truck arrival at Nakonde under RIT clearance\n20.02.25 - Truck under RIT clearance at Tunduma Tanzania\n22/02/25 - Truck Enroute to Offloading location\n24/02/25 - Truck waiting to offload at KICD\n25.02.25 - Delivered",
+					"displayValue": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n12.02.25 - Truck Dispatch\n13.02.25 - Truck enroute to kasumbalesa\n14.02.25 - Truck under RIT clearance kasumbalesa DRC\n15.02.25 - Truck under export clearance kasumbalesa zambia\n15.02.25 - Truck enroute to Nakonde\n17.02.25 - Truck arrival at Nakonde under RIT clearance\n20.02.25 - Truck under RIT clearance at Tunduma Tanzania\n22/02/25 - Truck Enroute to Offloading location\n24/02/25 - Truck waiting to offload at KICD\n25.02.25 - Delivered"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 5018917214621572,
+			"rowNumber": 13,
+			"siblingId": 515317587251076,
+			"expanded": true,
+			"createdAt": "2025-01-29T12:45:36Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3326,
+					"displayValue": "3326"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T408EGG",
+					"displayValue": "T408EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T517EFG",
+					"displayValue": "T517EFG"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "RAJABU IBRAHIMU RASHIDI",
+					"displayValue": "RAJABU IBRAHIMU RASHIDI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Delivered",
+					"displayValue": "Delivered"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-09"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -11/02/25\n\nKasumbalesa ZM IN -11/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -16/02/25\n\nTunduma IN -16/02/25\nTunduma OUT -18/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -11/02/25\n\nKasumbalesa ZM IN -11/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -16/02/25\n\nTunduma IN -16/02/25\nTunduma OUT -18/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n09.02.25 - Truck Dispatch\n10.02.25 - Truck enroute to kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n11.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n16.02.25 - Truck under RIT clearance at Tunduma Tanzania\n18/02/25 - Truck Enroute to Offloading location\n20/02/25 - Truck waiting to offload at KICD\n24.02.25 - Delivered",
+					"displayValue": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n09.02.25 - Truck Dispatch\n10.02.25 - Truck enroute to kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n11.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n16.02.25 - Truck under RIT clearance at Tunduma Tanzania\n18/02/25 - Truck Enroute to Offloading location\n20/02/25 - Truck waiting to offload at KICD\n24.02.25 - Delivered"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 2767117400936324,
+			"rowNumber": 14,
+			"siblingId": 5018917214621572,
+			"expanded": true,
+			"createdAt": "2025-01-29T12:45:36Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3325,
+					"displayValue": "3325"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T390EGG",
+					"displayValue": "T390EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T513EFG",
+					"displayValue": "T513EFG"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "HAMISI KASIMU MSANGAZI",
+					"displayValue": "HAMISI KASIMU MSANGAZI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Delivered",
+					"displayValue": "Delivered"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 14/02/25\nKasumablesa DRC OUT -15/02/25\n\nKasumbalesa ZM IN -15/02/25\nKasumbalesa ZM OUT -15/02/25\n\nNakonde IN - 17/02/25\nNakonde OUT -19/02/25\n\nTunduma IN -19/02/25\nTunduma OUT -21/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 14/02/25\nKasumablesa DRC OUT -15/02/25\n\nKasumbalesa ZM IN -15/02/25\nKasumbalesa ZM OUT -15/02/25\n\nNakonde IN - 17/02/25\nNakonde OUT -19/02/25\n\nTunduma IN -19/02/25\nTunduma OUT -21/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n12.02.25 - Truck Dispatch\n13.02.25 - Truck enroute to kasumbalesa\n14.02.25 - Truck under RIT clearance kasumbalesa DRC\n15.02.25 - Truck under export clearance kasumbalesa zambia\n15.02.25 - Truck enroute to Nakonde\n17.02.25 - Truck arrival at Nakonde under RIT clearance\n19.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n23/02/25 - Truck waiting to offload at KICD\n24.02.25 - Delivered",
+					"displayValue": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n12.02.25 - Truck Dispatch\n13.02.25 - Truck enroute to kasumbalesa\n14.02.25 - Truck under RIT clearance kasumbalesa DRC\n15.02.25 - Truck under export clearance kasumbalesa zambia\n15.02.25 - Truck enroute to Nakonde\n17.02.25 - Truck arrival at Nakonde under RIT clearance\n19.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n23/02/25 - Truck waiting to offload at KICD\n24.02.25 - Delivered"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 7270717028306820,
+			"rowNumber": 15,
+			"siblingId": 2767117400936324,
+			"expanded": true,
+			"createdAt": "2025-01-29T12:45:36Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3320,
+					"displayValue": "3320"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T862EAY",
+					"displayValue": "T862EAY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T878EAY",
+					"displayValue": "T878EAY"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "BAKARI NASIBU SHEHOZA",
+					"displayValue": "BAKARI NASIBU SHEHOZA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Mbeya,Tanzania",
+					"displayValue": "Mbeya,Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-31"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-13"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 16/02/25\nKasumablesa DRC OUT -16/02/25\n\nKasumbalesa ZM IN -16/02/25\nKasumbalesa ZM OUT -18/02/25\n\nNakonde IN - 21/02/25\nNakonde OUT -22/02/25\n\nTunduma IN -22/02/25\nTunduma OUT -24/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 16/02/25\nKasumablesa DRC OUT -16/02/25\n\nKasumbalesa ZM IN -16/02/25\nKasumbalesa ZM OUT -18/02/25\n\nNakonde IN - 21/02/25\nNakonde OUT -22/02/25\n\nTunduma IN -22/02/25\nTunduma OUT -24/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "29.01.25 - Truck on the way to loading Location\n30.01.25 - Trucks arrival CMOC KISANFU MINING SARL\n30.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n13.02.25 - Truck Dispatch\n14.02.25 - Truck enroute to kasumbalesa\n15.02.25 - In queue to Kasumbalesa\n16.02.25 - Truck under RIT clearance kasumbalesa DRC\n16.02.25 - Truck under export clearance kasumbalesa zambia\n18.02.25 - Truck enroute to Nakonde\n21.02.25 - Truck arrival at Nakonde under RIT clearance\n22.02.25 - Truck under RIT clearance at Tunduma Tanzania\n24/02/25 - Truck Enroute to Offloading location",
+					"displayValue": "29.01.25 - Truck on the way to loading Location\n30.01.25 - Trucks arrival CMOC KISANFU MINING SARL\n30.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n13.02.25 - Truck Dispatch\n14.02.25 - Truck enroute to kasumbalesa\n15.02.25 - In queue to Kasumbalesa\n16.02.25 - Truck under RIT clearance kasumbalesa DRC\n16.02.25 - Truck under export clearance kasumbalesa zambia\n18.02.25 - Truck enroute to Nakonde\n21.02.25 - Truck arrival at Nakonde under RIT clearance\n22.02.25 - Truck under RIT clearance at Tunduma Tanzania\n24/02/25 - Truck Enroute to Offloading location"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 1641217494093700,
+			"rowNumber": 16,
+			"siblingId": 7270717028306820,
+			"expanded": true,
+			"createdAt": "2025-01-29T12:45:36Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3321,
+					"displayValue": "3321"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T861EAY",
+					"displayValue": "T861EAY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T881EAY",
+					"displayValue": "T881EAY"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "KHALFAN OMARY MKUPETI",
+					"displayValue": "KHALFAN OMARY MKUPETI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Delivered",
+					"displayValue": "Delivered"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 14/02/25\nKasumablesa DRC OUT -15/02/25\n\nKasumbalesa ZM IN -15/02/25\nKasumbalesa ZM OUT -15/02/25\n\nNakonde IN - 17/02/25\nNakonde OUT -20/02/25\n\nTunduma IN -20/02/25\nTunduma OUT -22/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 14/02/25\nKasumablesa DRC OUT -15/02/25\n\nKasumbalesa ZM IN -15/02/25\nKasumbalesa ZM OUT -15/02/25\n\nNakonde IN - 17/02/25\nNakonde OUT -20/02/25\n\nTunduma IN -20/02/25\nTunduma OUT -22/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival CMOC KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n12.02.25 - Truck Dispatch\n13.02.25 - Truck enroute to kasumbalesa\n14.02.25 - Truck under RIT clearance kasumbalesa DRC\n15.02.25 - Truck under export clearance kasumbalesa zambia\n15.02.25 - Truck enroute to Nakonde\n17.02.25 - Truck arrival at Nakonde under RIT clearance\n20.02.25 - Truck under RIT clearance at Tunduma Tanzania\n22/02/25 - Truck Enroute to Offloading location\n24/02/25 - Truck waiting to offload at KICD\n25.02.25 - Delivered",
+					"displayValue": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival CMOC KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n12.02.25 - Truck Dispatch\n13.02.25 - Truck enroute to kasumbalesa\n14.02.25 - Truck under RIT clearance kasumbalesa DRC\n15.02.25 - Truck under export clearance kasumbalesa zambia\n15.02.25 - Truck enroute to Nakonde\n17.02.25 - Truck arrival at Nakonde under RIT clearance\n20.02.25 - Truck under RIT clearance at Tunduma Tanzania\n22/02/25 - Truck Enroute to Offloading location\n24/02/25 - Truck waiting to offload at KICD\n25.02.25 - Delivered"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 6144817121464196,
+			"rowNumber": 17,
+			"siblingId": 1641217494093700,
+			"expanded": true,
+			"createdAt": "2025-01-29T12:45:36Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3324,
+					"displayValue": "3324"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T864EAY",
+					"displayValue": "T864EAY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T876EAY",
+					"displayValue": "T876EAY"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "ABDURHAMANI MOHAMEDI MPAKILWA",
+					"displayValue": "ABDURHAMANI MOHAMEDI MPAKILWA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Delivered",
+					"displayValue": "Delivered"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 14/02/25\nKasumablesa DRC OUT -15/02/25\n\nKasumbalesa ZM IN -15/02/25\nKasumbalesa ZM OUT -15/02/25\n\nNakonde IN - 17/02/25\nNakonde OUT -20/02/25\n\nTunduma IN -20/02/25\nTunduma OUT -22/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 14/02/25\nKasumablesa DRC OUT -15/02/25\n\nKasumbalesa ZM IN -15/02/25\nKasumbalesa ZM OUT -15/02/25\n\nNakonde IN - 17/02/25\nNakonde OUT -20/02/25\n\nTunduma IN -20/02/25\nTunduma OUT -22/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival CMOC KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n12.02.25 - Truck Dispatch\n13.02.25 - Truck enroute to kasumbalesa\n14.02.25 - Truck under RIT clearance kasumbalesa DRC\n15.02.25 - Truck under export clearance kasumbalesa zambia\n15.02.25 - Truck enroute to Nakonde\n17.02.25 - Truck arrival at Nakonde under RIT clearance\n20.02.25 - Truck under RIT clearance at Tunduma Tanzania\n22/02/25 - Truck Enroute to Offloading location\n24/02/25 - Truck waiting to offload at KICD\n25.02.25 - Delivered",
+					"displayValue": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival CMOC KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n12.02.25 - Truck Dispatch\n13.02.25 - Truck enroute to kasumbalesa\n14.02.25 - Truck under RIT clearance kasumbalesa DRC\n15.02.25 - Truck under export clearance kasumbalesa zambia\n15.02.25 - Truck enroute to Nakonde\n17.02.25 - Truck arrival at Nakonde under RIT clearance\n20.02.25 - Truck under RIT clearance at Tunduma Tanzania\n22/02/25 - Truck Enroute to Offloading location\n24/02/25 - Truck waiting to offload at KICD\n25.02.25 - Delivered"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 3893017307778948,
+			"rowNumber": 18,
+			"siblingId": 6144817121464196,
+			"expanded": true,
+			"createdAt": "2025-01-29T12:45:36Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3327,
+					"displayValue": "3327"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T817EBK",
+					"displayValue": "T817EBK"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T877EAY",
+					"displayValue": "T877EAY"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "SAID MOHAMED ALLY",
+					"displayValue": "SAID MOHAMED ALLY"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Delivered",
+					"displayValue": "Delivered"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-09"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -11/02/25\n\nKasumbalesa ZM IN -11/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -16/02/25\n\nTunduma IN -16/02/25\nTunduma OUT -18/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -11/02/25\n\nKasumbalesa ZM IN -11/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -16/02/25\n\nTunduma IN -16/02/25\nTunduma OUT -18/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival CMOC KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n09.02.25 - Truck Dispatch\n10.02.25 - Truck enroute to kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n11.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n16.02.25 - Truck under RIT clearance at Tunduma Tanzania\n18/02/25 - Truck Enroute to Offloading location\n20/02/25 - Truck waiting to offload at KICD\n24.02.25 - Delivered",
+					"displayValue": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival CMOC KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n09.02.25 - Truck Dispatch\n10.02.25 - Truck enroute to kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n11.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n16.02.25 - Truck under RIT clearance at Tunduma Tanzania\n18/02/25 - Truck Enroute to Offloading location\n20/02/25 - Truck waiting to offload at KICD\n24.02.25 - Delivered"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 8396616935149444,
+			"rowNumber": 19,
+			"siblingId": 3893017307778948,
+			"expanded": true,
+			"createdAt": "2025-01-29T12:45:36Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3323,
+					"displayValue": "3323"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T853EAY",
+					"displayValue": "T853EAY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T873EAY",
+					"displayValue": "T873EAY"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "MUSA JUMA MBWANA",
+					"displayValue": "MUSA JUMA MBWANA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Delivered",
+					"displayValue": "Delivered"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 14/02/25\nKasumablesa DRC OUT -15/02/25\n\nKasumbalesa ZM IN -15/02/25\nKasumbalesa ZM OUT -15/02/25\n\nNakonde IN - 17/02/25\nNakonde OUT -19/02/25\n\nTunduma IN -19/02/25\nTunduma OUT -21/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 14/02/25\nKasumablesa DRC OUT -15/02/25\n\nKasumbalesa ZM IN -15/02/25\nKasumbalesa ZM OUT -15/02/25\n\nNakonde IN - 17/02/25\nNakonde OUT -19/02/25\n\nTunduma IN -19/02/25\nTunduma OUT -21/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival CMOC KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n12.02.25 - Truck Dispatch\n13.02.25 - Truck enroute to kasumbalesa\n14.02.25 - Truck under RIT clearance kasumbalesa DRC\n15.02.25 - Truck under export clearance kasumbalesa zambia\n15.02.25 - Truck enroute to Nakonde\n17.02.25 - Truck arrival at Nakonde under RIT clearance\n19.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n23/02/25 - Truck waiting to offload at KICD\n24.02.25 - Delivered",
+					"displayValue": "29.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival CMOC KISANFU MINING SARL\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n12.02.25 - Truck Dispatch\n13.02.25 - Truck enroute to kasumbalesa\n14.02.25 - Truck under RIT clearance kasumbalesa DRC\n15.02.25 - Truck under export clearance kasumbalesa zambia\n15.02.25 - Truck enroute to Nakonde\n17.02.25 - Truck arrival at Nakonde under RIT clearance\n19.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n23/02/25 - Truck waiting to offload at KICD\n24.02.25 - Delivered"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 1078267540672388,
+			"rowNumber": 20,
+			"siblingId": 8396616935149444,
+			"expanded": true,
+			"createdAt": "2025-01-29T12:45:36Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3322,
+					"displayValue": "3322"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T855EAY",
+					"displayValue": "T855EAY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T872EAY",
+					"displayValue": "T872EAY"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "OMARRY HAMADI HAMIDU",
+					"displayValue": "OMARRY HAMADI HAMIDU"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Mbeya, Tanzania",
+					"displayValue": "Mbeya, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-31"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-13"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 16/02/25\nKasumablesa DRC OUT -16/02/25\n\nKasumbalesa ZM IN -16/02/25\nKasumbalesa ZM OUT -18/02/25\n\nNakonde IN - 21/02/25\nNakonde OUT -22/02/25\n\nTunduma IN -22/02/25\nTunduma OUT -24/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 16/02/25\nKasumablesa DRC OUT -16/02/25\n\nKasumbalesa ZM IN -16/02/25\nKasumbalesa ZM OUT -18/02/25\n\nNakonde IN - 21/02/25\nNakonde OUT -22/02/25\n\nTunduma IN -22/02/25\nTunduma OUT -24/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "29.01.25 - Truck on the way to loading Location\n30.01.25 - Trucks arrival CMOC KISANFU MINING SARL\n30.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n13.02.25 - Truck Dispatch\n14.02.25 - Truck enroute to kasumbalesa\n15.02.25 - In queue to Kasumbalesa\n16.02.25 - Truck under RIT clearance kasumbalesa DRC\n16.02.25 - Truck under export clearance kasumbalesa zambia\n18.02.25 - Truck enroute to Nakonde\n21.02.25 - Truck arrival at Nakonde under RIT clearance\n22.02.25 - Truck under RIT clearance at Tunduma Tanzania\n24/02/25 - Truck Enroute to Offloading location",
+					"displayValue": "29.01.25 - Truck on the way to loading Location\n30.01.25 - Trucks arrival CMOC KISANFU MINING SARL\n30.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n13.02.25 - Truck Dispatch\n14.02.25 - Truck enroute to kasumbalesa\n15.02.25 - In queue to Kasumbalesa\n16.02.25 - Truck under RIT clearance kasumbalesa DRC\n16.02.25 - Truck under export clearance kasumbalesa zambia\n18.02.25 - Truck enroute to Nakonde\n21.02.25 - Truck arrival at Nakonde under RIT clearance\n22.02.25 - Truck under RIT clearance at Tunduma Tanzania\n24/02/25 - Truck Enroute to Offloading location"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 383137906167684,
+			"rowNumber": 21,
+			"siblingId": 1078267540672388,
+			"expanded": true,
+			"createdAt": "2025-02-08T05:53:43Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T303DSY",
+					"displayValue": "T303DSY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T336EGV",
+					"displayValue": "T336EGV"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "SALEHE MALENDA",
+					"displayValue": "SALEHE MALENDA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Likasi, DRC",
+					"displayValue": "Likasi, DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-07"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-25"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-25"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival CMOC KISANFU MINING SARL\n05.02.25 - Truck  waiting to load\n07.02.25 - Truck loaded waiting for Dispatch\n25.02.25 - Truck Dispatch",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival CMOC KISANFU MINING SARL\n05.02.25 - Truck  waiting to load\n07.02.25 - Truck loaded waiting for Dispatch\n25.02.25 - Truck Dispatch"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 4136242593402756,
+			"rowNumber": 22,
+			"siblingId": 383137906167684,
+			"expanded": true,
+			"createdAt": "2025-01-29T13:00:29Z",
+			"modifiedAt": "2025-02-26T09:53:25Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3311,
+					"displayValue": "3311"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Somika SAS",
+					"displayValue": "Somika SAS"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T375EGG",
+					"displayValue": "T375EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T267EDS",
+					"displayValue": "T267EDS"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "JOHN EDWIN LYAHEJA",
+					"displayValue": "JOHN EDWIN LYAHEJA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Waiting to Offload",
+					"displayValue": "Waiting to Offload"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-28"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-06"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -10/02/25\n\nKasumbalesa ZM IN -10/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -18/02/25\n\nTunduma IN -18/02/25\nTunduma OUT -21/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -10/02/25\n\nKasumbalesa ZM IN -10/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -18/02/25\n\nTunduma IN -18/02/25\nTunduma OUT -21/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "28.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n06.01.25 - Truck Dispatch\n07.01.25 - Truck enroute to kasumbalesa\n10.02.25 - In queue to Kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n10.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n18.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n25/02/25 - Truck waiting to offload at HONEST CFS",
+					"displayValue": "28.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n06.01.25 - Truck Dispatch\n07.01.25 - Truck enroute to kasumbalesa\n10.02.25 - In queue to Kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n10.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n18.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n25/02/25 - Truck waiting to offload at HONEST CFS"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 8639842220773252,
+			"rowNumber": 23,
+			"siblingId": 4136242593402756,
+			"expanded": true,
+			"createdAt": "2025-01-29T13:00:29Z",
+			"modifiedAt": "2025-02-26T09:53:25Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3310,
+					"displayValue": "3310"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Somika SAS",
+					"displayValue": "Somika SAS"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T351EGG",
+					"displayValue": "T351EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T270EDS",
+					"displayValue": "T270EDS"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "LYANGA ISSA MOHAMEDI",
+					"displayValue": "LYANGA ISSA MOHAMEDI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Waiting to Offload",
+					"displayValue": "Waiting to Offload"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-28"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-06"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -10/02/25\n\nKasumbalesa ZM IN -10/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -18/02/25\n\nTunduma IN -18/02/25\nTunduma OUT -21/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -10/02/25\n\nKasumbalesa ZM IN -10/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -18/02/25\n\nTunduma IN -18/02/25\nTunduma OUT -21/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "28.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n06.01.25 - Truck Dispatch\n07.01.25 - Truck enroute to kasumbalesa\n10.02.25 - In queue to Kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n10.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n18.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n25/02/25 - Truck waiting to offload at HONEST CFS",
+					"displayValue": "28.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n06.01.25 - Truck Dispatch\n07.01.25 - Truck enroute to kasumbalesa\n10.02.25 - In queue to Kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n10.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n18.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n25/02/25 - Truck waiting to offload at HONEST CFS"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 477067896164228,
+			"rowNumber": 24,
+			"siblingId": 8639842220773252,
+			"expanded": true,
+			"createdAt": "2025-01-29T13:00:29Z",
+			"modifiedAt": "2025-02-26T09:53:25Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3313,
+					"displayValue": "3313"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Somika SAS",
+					"displayValue": "Somika SAS"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T367EGG",
+					"displayValue": "T367EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T260EDS",
+					"displayValue": "T260EDS"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "YUSUPH RAMADHANI SHEMAHONGE",
+					"displayValue": "YUSUPH RAMADHANI SHEMAHONGE"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Waiting to Offload",
+					"displayValue": "Waiting to Offload"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-28"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-06"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -10/02/25\n\nKasumbalesa ZM IN -10/02/25\nKasumbalesa ZM OUT -12/02/25\n\nNakonde IN - 14/02/25\nNakonde OUT -18/02/25\n\nTunduma IN -18/02/25\nTunduma OUT -21/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -10/02/25\n\nKasumbalesa ZM IN -10/02/25\nKasumbalesa ZM OUT -12/02/25\n\nNakonde IN - 14/02/25\nNakonde OUT -18/02/25\n\nTunduma IN -18/02/25\nTunduma OUT -21/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "28.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n06.01.25 - Truck Dispatch\n07.01.25 - Truck enroute to kasumbalesa\n10.02.25 - In queue to Kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n10.02.25 - Truck under export clearance kasumbalesa zambia\n12.02.25 - Truck enroute to Nakonde\n14.02.25 - Truck arrival at Nakonde under RIT clearance\n18.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n25/02/25 - Truck waiting to offload at HONEST CFS",
+					"displayValue": "28.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n06.01.25 - Truck Dispatch\n07.01.25 - Truck enroute to kasumbalesa\n10.02.25 - In queue to Kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n10.02.25 - Truck under export clearance kasumbalesa zambia\n12.02.25 - Truck enroute to Nakonde\n14.02.25 - Truck arrival at Nakonde under RIT clearance\n18.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n25/02/25 - Truck waiting to offload at HONEST CFS"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 4980667523534724,
+			"rowNumber": 25,
+			"siblingId": 477067896164228,
+			"expanded": true,
+			"createdAt": "2025-01-29T13:00:29Z",
+			"modifiedAt": "2025-02-26T09:53:25Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3312,
+					"displayValue": "3312"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Somika SAS",
+					"displayValue": "Somika SAS"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T372EGG",
+					"displayValue": "T372EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T269EDS",
+					"displayValue": "T269EDS"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "RAJABU MIRAJI KISUKARI",
+					"displayValue": "RAJABU MIRAJI KISUKARI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Waiting to Offload",
+					"displayValue": "Waiting to Offload"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-28"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-29"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-06"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -10/02/25\n\nKasumbalesa ZM IN -10/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -18/02/25\n\nTunduma IN -18/02/25\nTunduma OUT -21/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -10/02/25\n\nKasumbalesa ZM IN -10/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -18/02/25\n\nTunduma IN -18/02/25\nTunduma OUT -21/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "28.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n06.01.25 - Truck Dispatch\n07.01.25 - Truck enroute to kasumbalesa\n10.02.25 - In queue to Kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n10.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n18.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n25/02/25 - Truck waiting to offload at HONEST CFS",
+					"displayValue": "28.01.25 - Truck on the way to loading Location\n29.01.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n29.01.25 - Truck  waiting to load\n30.01.25 - Truck loaded waiting for Dispatch\n06.01.25 - Truck Dispatch\n07.01.25 - Truck enroute to kasumbalesa\n10.02.25 - In queue to Kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n10.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n18.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n25/02/25 - Truck waiting to offload at HONEST CFS"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 2967937518145412,
+			"rowNumber": 26,
+			"siblingId": 4980667523534724,
+			"expanded": true,
+			"createdAt": "2025-01-31T06:34:47Z",
+			"modifiedAt": "2025-02-26T09:53:25Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3317,
+					"displayValue": "3317"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Somika SAS",
+					"displayValue": "Somika SAS"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T340EGG",
+					"displayValue": "T340EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T266EDS",
+					"displayValue": "T266EDS"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "SAID RASHIDI NAMAONA",
+					"displayValue": "SAID RASHIDI NAMAONA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Waiting to Offload",
+					"displayValue": "Waiting to Offload"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-31"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-31"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-06"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -10/02/25\n\nKasumbalesa ZM IN -10/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -18/02/25\n\nTunduma IN -18/02/25\nTunduma OUT -21/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -10/02/25\n\nKasumbalesa ZM IN -10/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -18/02/25\n\nTunduma IN -18/02/25\nTunduma OUT -21/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "30.01.25 - Truck on the way to loading Location\n31.01.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n31.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n06.01.25 - Truck Dispatch\n07.01.25 - Truck enroute to kasumbalesa\n10.02.25 - In queue to Kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n10.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n18.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n25/02/25 - Truck waiting to offload at HONEST CFS",
+					"displayValue": "30.01.25 - Truck on the way to loading Location\n31.01.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n31.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n06.01.25 - Truck Dispatch\n07.01.25 - Truck enroute to kasumbalesa\n10.02.25 - In queue to Kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n10.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n18.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n25/02/25 - Truck waiting to offload at HONEST CFS"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 7471537145515908,
+			"rowNumber": 27,
+			"siblingId": 2967937518145412,
+			"expanded": true,
+			"createdAt": "2025-01-31T06:34:47Z",
+			"modifiedAt": "2025-02-26T09:53:25Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3314,
+					"displayValue": "3314"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Somika SAS",
+					"displayValue": "Somika SAS"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T345EGG",
+					"displayValue": "T345EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T268EDS",
+					"displayValue": "T268EDS"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "HASSAN SAID NGOMOLE",
+					"displayValue": "HASSAN SAID NGOMOLE"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Waiting to Offload",
+					"displayValue": "Waiting to Offload"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-01-30"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-01-31"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-01-31"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-06"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-23"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -10/02/25\n\nKasumbalesa ZM IN -10/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -18/02/25\n\nTunduma IN -18/02/25\nTunduma OUT -21/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 10/02/25\nKasumablesa DRC OUT -10/02/25\n\nKasumbalesa ZM IN -10/02/25\nKasumbalesa ZM OUT -13/02/25\n\nNakonde IN - 15/02/25\nNakonde OUT -18/02/25\n\nTunduma IN -18/02/25\nTunduma OUT -21/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "30.01.25 - Truck on the way to loading Location\n31.01.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n31.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n06.01.25 - Truck Dispatch\n07.01.25 - Truck enroute to kasumbalesa\n10.02.25 - In queue to Kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n10.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n18.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n25/02/25 - Truck waiting to offload at HONEST CFS",
+					"displayValue": "30.01.25 - Truck on the way to loading Location\n31.01.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n31.01.25 - Truck  waiting to load\n31.01.25 - Truck loaded waiting for Dispatch\n06.01.25 - Truck Dispatch\n07.01.25 - Truck enroute to kasumbalesa\n10.02.25 - In queue to Kasumbalesa\n10.02.25 - Truck under RIT clearance kasumbalesa DRC\n10.02.25 - Truck under export clearance kasumbalesa zambia\n13.02.25 - Truck enroute to Nakonde\n15.02.25 - Truck arrival at Nakonde under RIT clearance\n18.02.25 - Truck under RIT clearance at Tunduma Tanzania\n21/02/25 - Truck Enroute to Offloading location\n25/02/25 - Truck waiting to offload at HONEST CFS"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 5480308527599492,
+			"rowNumber": 28,
+			"siblingId": 7471537145515908,
+			"expanded": true,
+			"createdAt": "2025-02-04T06:30:08Z",
+			"modifiedAt": "2025-02-26T09:53:25Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3315,
+					"displayValue": "3315"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Somika SAS",
+					"displayValue": "Somika SAS"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T387EGG",
+					"displayValue": "T387EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T263EDS",
+					"displayValue": "T263EDS"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "ABDULAZIZI ABDURAHMAN SEMKUFU",
+					"displayValue": "ABDULAZIZI ABDURAHMAN SEMKUFU"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Morogoro,Tanzania",
+					"displayValue": "Morogoro,Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-03"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-04"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-04"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-02"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 15/02/25\nKasumablesa DRC OUT -16/02/25\n\nKasumbalesa ZM IN -16/02/25\nKasumbalesa ZM OUT -18/02/25\n\nNakonde IN -  20/02/25\nNakonde OUT -21/02/25\n\nTunduma IN -21/02/25\nTunduma OUT -25/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 15/02/25\nKasumablesa DRC OUT -16/02/25\n\nKasumbalesa ZM IN -16/02/25\nKasumbalesa ZM OUT -18/02/25\n\nNakonde IN -  20/02/25\nNakonde OUT -21/02/25\n\nTunduma IN -21/02/25\nTunduma OUT -25/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "03.02.25 - Truck on the way to loading Location\n04.02.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n04.02.25 - Truck  waiting to load\n04.02.25 - Truck loaded waiting for Dispatch\n12.01.25 - Truck Dispatch\n13.01.25 - Truck enroute to kasumbalesa\n15.02.25 - In queue to Kasumbalesa\n15.02.25 - Truck under RIT clearance kasumbalesa DRC\n16.02.25 - Truck under export clearance kasumbalesa zambia\n18.02.25 - Truck enroute to Nakonde\n20.02.25 - Truck arrival at Nakonde under RIT clearance\n21/02/25 - Truck under RIT clearance at Tunduma Tanzania\n25/02/25 - Truck Enroute to Offloading location",
+					"displayValue": "03.02.25 - Truck on the way to loading Location\n04.02.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n04.02.25 - Truck  waiting to load\n04.02.25 - Truck loaded waiting for Dispatch\n12.01.25 - Truck Dispatch\n13.01.25 - Truck enroute to kasumbalesa\n15.02.25 - In queue to Kasumbalesa\n15.02.25 - Truck under RIT clearance kasumbalesa DRC\n16.02.25 - Truck under export clearance kasumbalesa zambia\n18.02.25 - Truck enroute to Nakonde\n20.02.25 - Truck arrival at Nakonde under RIT clearance\n21/02/25 - Truck under RIT clearance at Tunduma Tanzania\n25/02/25 - Truck Enroute to Offloading location"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 3228508713914244,
+			"rowNumber": 29,
+			"siblingId": 5480308527599492,
+			"expanded": true,
+			"createdAt": "2025-02-04T06:30:08Z",
+			"modifiedAt": "2025-02-26T09:53:25Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3316,
+					"displayValue": "3316"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Somika SAS",
+					"displayValue": "Somika SAS"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T405EGG",
+					"displayValue": "T405EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T272EDS",
+					"displayValue": "T272EDS"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "LUCAS RAYMONDI FELICIAN",
+					"displayValue": "LUCAS RAYMONDI FELICIAN"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Waiting for RIT Clearance",
+					"displayValue": "Waiting for RIT Clearance"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Tunduma,Tanzania",
+					"displayValue": "Tunduma,Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-03"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-04"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-04"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-02"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 15/02/25\nKasumablesa DRC OUT -16/02/25\n\nKasumbalesa ZM IN -16/02/25\nKasumbalesa ZM OUT -18/02/25\n\nNakonde IN -  20/02/25\nNakonde OUT -21/02/25\n\nTunduma IN -21/02/25\nTunduma OUT -",
+					"displayValue": "Kasumbalesa DRC IN - 15/02/25\nKasumablesa DRC OUT -16/02/25\n\nKasumbalesa ZM IN -16/02/25\nKasumbalesa ZM OUT -18/02/25\n\nNakonde IN -  20/02/25\nNakonde OUT -21/02/25\n\nTunduma IN -21/02/25\nTunduma OUT -"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "03.02.25 - Truck on the way to loading Location\n04.02.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n04.02.25 - Truck  waiting to load\n04.02.25 - Truck loaded waiting for Dispatch\n12.01.25 - Truck Dispatch\n13.01.25 - Truck enroute to kasumbalesa\n15.02.25 - In queue to Kasumbalesa\n15.02.25 - Truck under RIT clearance kasumbalesa DRC\n16.02.25 - Truck under export clearance kasumbalesa zambia\n18.02.25 - Truck enroute to Nakonde\n20.02.25 - Truck arrival at Nakonde under RIT clearance\n21/02/25 - Truck under RIT clearance at Tunduma Tanzania\n25/02/25 -  Waiting for TRA document due to system challenges",
+					"displayValue": "03.02.25 - Truck on the way to loading Location\n04.02.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n04.02.25 - Truck  waiting to load\n04.02.25 - Truck loaded waiting for Dispatch\n12.01.25 - Truck Dispatch\n13.01.25 - Truck enroute to kasumbalesa\n15.02.25 - In queue to Kasumbalesa\n15.02.25 - Truck under RIT clearance kasumbalesa DRC\n16.02.25 - Truck under export clearance kasumbalesa zambia\n18.02.25 - Truck enroute to Nakonde\n20.02.25 - Truck arrival at Nakonde under RIT clearance\n21/02/25 - Truck under RIT clearance at Tunduma Tanzania\n25/02/25 -  Waiting for TRA document due to system challenges"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 7109069996035972,
+			"rowNumber": 30,
+			"siblingId": 3228508713914244,
+			"expanded": true,
+			"createdAt": "2025-02-10T06:21:51Z",
+			"modifiedAt": "2025-02-26T09:53:25Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3318,
+					"displayValue": "3318"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 32,
+					"displayValue": "32"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Somika SAS",
+					"displayValue": "Somika SAS"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T357EGG",
+					"displayValue": "T357EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T257EDS",
+					"displayValue": "T257EDS"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "IDDI SUFIAN GENI",
+					"displayValue": "IDDI SUFIAN GENI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Mbeya,Tanzania",
+					"displayValue": "Mbeya,Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-08"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-09"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-10"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-28"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Kasumbalesa DRC IN - 15/02/25\nKasumablesa DRC OUT -16/02/25\n\nKasumbalesa ZM IN -16/02/25\nKasumbalesa ZM OUT -18/02/25\n\nNakonde IN - 20/02/25\nNakonde OUT -21/02/25\n\nTunduma IN -21/02/25\nTunduma OUT -26/02/25",
+					"displayValue": "Kasumbalesa DRC IN - 15/02/25\nKasumablesa DRC OUT -16/02/25\n\nKasumbalesa ZM IN -16/02/25\nKasumbalesa ZM OUT -18/02/25\n\nNakonde IN - 20/02/25\nNakonde OUT -21/02/25\n\nTunduma IN -21/02/25\nTunduma OUT -26/02/25"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "08.02.25 - Truck on the way to loading Location\n09.02.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n09.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch\n12.01.25 - Truck Dispatch\n13.01.25 - Truck enroute to kasumbalesa\n15.02.25 - In queue to Kasumbalesa\n15.02.25 - Truck under RIT clearance kasumbalesa DRC\n16.02.25 - Truck under export clearance kasumbalesa zambia\n18.02.25 - Truck enroute to Nakonde\n20.02.25 - Truck arrival at Nakonde under RIT clearance\n21/02/25 - Truck under RIT clearance at Tunduma Tanzania\n25/02/25 -  Waiting for TRA document due to system challenges\n26/02/25 - Truck Enroute to Offloading location",
+					"displayValue": "08.02.25 - Truck on the way to loading Location\n09.02.25 - Trucks arrival KISANFU (KIMIN SAS)DRC\n09.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch\n12.01.25 - Truck Dispatch\n13.01.25 - Truck enroute to kasumbalesa\n15.02.25 - In queue to Kasumbalesa\n15.02.25 - Truck under RIT clearance kasumbalesa DRC\n16.02.25 - Truck under export clearance kasumbalesa zambia\n18.02.25 - Truck enroute to Nakonde\n20.02.25 - Truck arrival at Nakonde under RIT clearance\n21/02/25 - Truck under RIT clearance at Tunduma Tanzania\n25/02/25 -  Waiting for TRA document due to system challenges\n26/02/25 - Truck Enroute to Offloading location"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 1966676787335044,
+			"rowNumber": 31,
+			"siblingId": 7109069996035972,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T875EJX",
+					"displayValue": "T875EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T148EKK",
+					"displayValue": "T148EKK"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "RIDHIWANI HARUNA ATHUMANI",
+					"displayValue": "RIDHIWANI HARUNA ATHUMANI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Loaded Waiting for Dispatch",
+					"displayValue": "Loaded Waiting for Dispatch"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "TFM MINE.DRC",
+					"displayValue": "TFM MINE.DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-11"
+				},
+				{
+					"columnId": 2975612371003268
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 6470276414705540,
+			"rowNumber": 32,
+			"siblingId": 1966676787335044,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T876EJX",
+					"displayValue": "T876EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T133EKK",
+					"displayValue": "T133EKK"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "ABDALLAH ZUBERI HAU",
+					"displayValue": "ABDALLAH ZUBERI HAU"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-10"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-24"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 4218476601020292,
+			"rowNumber": 33,
+			"siblingId": 6470276414705540,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T877EJX",
+					"displayValue": "T877EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T961EKJ",
+					"displayValue": "T961EKJ"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "RAMADHAN JUMANNE NGASA",
+					"displayValue": "RAMADHAN JUMANNE NGASA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Loaded Waiting for Dispatch",
+					"displayValue": "Loaded Waiting for Dispatch"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "TFM MINE.DRC",
+					"displayValue": "TFM MINE.DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-11"
+				},
+				{
+					"columnId": 2975612371003268
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 8722076228390788,
+			"rowNumber": 34,
+			"siblingId": 4218476601020292,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T880EJX",
+					"displayValue": "T880EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T957EKJ",
+					"displayValue": "T957EKJ"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "JOHN MARTIN SEMPINDU",
+					"displayValue": "JOHN MARTIN SEMPINDU"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-10"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-24"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 559301903781764,
+			"rowNumber": 35,
+			"siblingId": 8722076228390788,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T881EJX",
+					"displayValue": "T881EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T145EKK",
+					"displayValue": "T145EKK"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "KASSIM MOHAMED MPILI",
+					"displayValue": "KASSIM MOHAMED MPILI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Loaded Waiting for Dispatch",
+					"displayValue": "Loaded Waiting for Dispatch"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "TFM MINE.DRC",
+					"displayValue": "TFM MINE.DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-11"
+				},
+				{
+					"columnId": 2975612371003268
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 5062901531152260,
+			"rowNumber": 36,
+			"siblingId": 559301903781764,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T882EJX",
+					"displayValue": "T882EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T159EKK",
+					"displayValue": "T159EKK"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "ALLY YASSINI HEMED",
+					"displayValue": "ALLY YASSINI HEMED"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-11"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-24"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 2811101717467012,
+			"rowNumber": 37,
+			"siblingId": 5062901531152260,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T883EJX",
+					"displayValue": "T883EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T137EKK",
+					"displayValue": "T137EKK"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "EVANCE CHRISTOPHER KAMBONA",
+					"displayValue": "EVANCE CHRISTOPHER KAMBONA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-10"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-24"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 7314701344837508,
+			"rowNumber": 38,
+			"siblingId": 2811101717467012,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T885EJX",
+					"displayValue": "T885EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T155EKK",
+					"displayValue": "T155EKK"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "GIBBONCE WILSON MWAKILEMBE",
+					"displayValue": "GIBBONCE WILSON MWAKILEMBE"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-11"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-24"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 1685201810624388,
+			"rowNumber": 39,
+			"siblingId": 7314701344837508,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T886EJX",
+					"displayValue": "T886EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T160EKK",
+					"displayValue": "T160EKK"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "KASSIM ABDALLAH HAMIS",
+					"displayValue": "KASSIM ABDALLAH HAMIS"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-11"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-24"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 6188801437994884,
+			"rowNumber": 40,
+			"siblingId": 1685201810624388,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T891EJX",
+					"displayValue": "T891EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T152EKK",
+					"displayValue": "T152EKK"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "MGAYA ALFANI MANDIA",
+					"displayValue": "MGAYA ALFANI MANDIA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Loaded Waiting for Dispatch",
+					"displayValue": "Loaded Waiting for Dispatch"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "TFM MINE.DRC",
+					"displayValue": "TFM MINE.DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-11"
+				},
+				{
+					"columnId": 2975612371003268
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 3937001624309636,
+			"rowNumber": 41,
+			"siblingId": 6188801437994884,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T892EJX",
+					"displayValue": "T892EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T141EKK",
+					"displayValue": "T141EKK"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "KARIMU ABDI KIMARO",
+					"displayValue": "KARIMU ABDI KIMARO"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-10"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-24"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 8440601251680132,
+			"rowNumber": 42,
+			"siblingId": 3937001624309636,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T893EJX",
+					"displayValue": "T893EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T138EKK",
+					"displayValue": "T138EKK"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "ERICK MACHIYA SHEPA",
+					"displayValue": "ERICK MACHIYA SHEPA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Loaded Waiting for Dispatch",
+					"displayValue": "Loaded Waiting for Dispatch"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "TFM MINE.DRC",
+					"displayValue": "TFM MINE.DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-10"
+				},
+				{
+					"columnId": 2975612371003268
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 1122251857203076,
+			"rowNumber": 43,
+			"siblingId": 8440601251680132,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T894EJX",
+					"displayValue": "T894EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T146EKK",
+					"displayValue": "T146EKK"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "ALEX STEPHEN RUMANYIKA",
+					"displayValue": "ALEX STEPHEN RUMANYIKA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Moving Loaded",
+					"displayValue": "Moving Loaded"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Whiskey,DRC",
+					"displayValue": "Whiskey,DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-10"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-24"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n10.02.25 - Truck loaded waiting for Dispatch\n24.02.25 - Truck Dispatch\n25.02.25 - Truck enroute to kasumbalesa"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 5625851484573572,
+			"rowNumber": 44,
+			"siblingId": 1122251857203076,
+			"expanded": true,
+			"createdAt": "2025-02-07T09:05:14Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T305DSY",
+					"displayValue": "T305DSY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T154EKK",
+					"displayValue": "T154EKK"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "MAHAMUDU MBWANA KAPANDA",
+					"displayValue": "MAHAMUDU MBWANA KAPANDA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Loaded Waiting for Dispatch",
+					"displayValue": "Loaded Waiting for Dispatch"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "TFM MINE.DRC",
+					"displayValue": "TFM MINE.DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-05"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-11"
+				},
+				{
+					"columnId": 2975612371003268
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-10"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch",
+					"displayValue": "05.02.25 - Truck on the way to loading Location\n05.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n05.02.25 - Truck  waiting to load\n11.02.25 - Truck loaded waiting for Dispatch"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 2619047108677508,
+			"rowNumber": 45,
+			"siblingId": 5625851484573572,
+			"expanded": true,
+			"createdAt": "2025-02-20T06:14:17Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Copper",
+					"displayValue": "Copper"
+				},
+				{
+					"columnId": 160862603896708
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Reload Logistics",
+					"displayValue": "Reload Logistics"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T308DSY",
+					"displayValue": "T308DSY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T847EGV",
+					"displayValue": "T847EGV"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "RICHARD JULIUS SAMWALI",
+					"displayValue": "RICHARD JULIUS SAMWALI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Loaded Waiting for Dispatch",
+					"displayValue": "Loaded Waiting for Dispatch"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "TFM MINE.DRC",
+					"displayValue": "TFM MINE.DRC"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "Dar es salaam, Tanzania",
+					"displayValue": "Dar es salaam, Tanzania"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-12"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-16"
+				},
+				{
+					"columnId": 2975612371003268
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-03-20"
+				},
+				{
+					"columnId": 723812557318020
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "11.02.25 - Truck on the way to loading Location\n12.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n12.02.25 - Truck  waiting to load\n16.02.25 - Truck loaded waiting for Dispatch",
+					"displayValue": "11.02.25 - Truck on the way to loading Location\n12.02.25 - Trucks arrival Tenke Fungulume (TFM MINE),DRC\n12.02.25 - Truck  waiting to load\n16.02.25 - Truck loaded waiting for Dispatch"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 2869519161757572,
+			"rowNumber": 46,
+			"siblingId": 2619047108677508,
+			"expanded": true,
+			"createdAt": "2025-02-21T08:54:44Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3330,
+					"displayValue": "3330"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Sulphur",
+					"displayValue": "Sulphur"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 31,
+					"displayValue": "31"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Poseidon Logisticts",
+					"displayValue": "Poseidon Logisticts"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T858EAY",
+					"displayValue": "T858EAY"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T874EAY",
+					"displayValue": "T874EAY"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "GERALD MESHACK MANZILANZI",
+					"displayValue": "GERALD MESHACK MANZILANZI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Waiting for RIT Clearance",
+					"displayValue": "Waiting for RIT Clearance"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Tunduma,Tanzania",
+					"displayValue": "Tunduma,Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "LCS,DRC",
+					"displayValue": "LCS,DRC"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-21"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-21"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-21"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-21"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-18"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Tunduma IN - 24/02/25\nTunduma OUT -\n\nNakonde IN - \nNakonde OUT - \n\nKasumbalesa ZM IN - \nKasumbalesa ZM OUT - \n\nKasumbalesa DRC IN - \nKasumbalesa DRC OUT - \n\nWhiskey IN - \nWhiskey OUT -",
+					"displayValue": "Tunduma IN - 24/02/25\nTunduma OUT -\n\nNakonde IN - \nNakonde OUT - \n\nKasumbalesa ZM IN - \nKasumbalesa ZM OUT - \n\nKasumbalesa DRC IN - \nKasumbalesa DRC OUT - \n\nWhiskey IN - \nWhiskey OUT -"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "21.02.25 - Truck on the way to loading Location\n21.02.25 - Trucks arrival AFICD(Mchicha)\n21.02.25 - Truck  waiting to load\n21.02.25 - Truck loaded and Dispatch\n22.02.25 - Truck enroute to Tunduma border\n24/02/25 - Truck arrival Tunduma border Under RIT clearance",
+					"displayValue": "21.02.25 - Truck on the way to loading Location\n21.02.25 - Trucks arrival AFICD(Mchicha)\n21.02.25 - Truck  waiting to load\n21.02.25 - Truck loaded and Dispatch\n22.02.25 - Truck enroute to Tunduma border\n24/02/25 - Truck arrival Tunduma border Under RIT clearance"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 7373118789128068,
+			"rowNumber": 47,
+			"siblingId": 2869519161757572,
+			"expanded": true,
+			"createdAt": "2025-02-21T08:54:44Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3328,
+					"displayValue": "3328"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Sulphur",
+					"displayValue": "Sulphur"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 31,
+					"displayValue": "31"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Poseidon Logisticts",
+					"displayValue": "Poseidon Logisticts"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T890EJX",
+					"displayValue": "T890EJX"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T850EGV",
+					"displayValue": "T850EGV"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "JAFARI AYUBU SIMBA",
+					"displayValue": "JAFARI AYUBU SIMBA"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Waiting for RIT Clearance",
+					"displayValue": "Waiting for RIT Clearance"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Tunduma,Tanzania",
+					"displayValue": "Tunduma,Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "LCS,DRC",
+					"displayValue": "LCS,DRC"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-20"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-20"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-21"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-21"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-18"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Tunduma IN - 24/02/25\nTunduma OUT -\n\nNakonde IN - \nNakonde OUT - \n\nKasumbalesa ZM IN - \nKasumbalesa ZM OUT - \n\nKasumbalesa DRC IN - \nKasumbalesa DRC OUT - \n\nWhiskey IN - \nWhiskey OUT -",
+					"displayValue": "Tunduma IN - 24/02/25\nTunduma OUT -\n\nNakonde IN - \nNakonde OUT - \n\nKasumbalesa ZM IN - \nKasumbalesa ZM OUT - \n\nKasumbalesa DRC IN - \nKasumbalesa DRC OUT - \n\nWhiskey IN - \nWhiskey OUT -"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "20.02.25 - Truck on the way to loading Location\n20.02.25 - Trucks arrival AFICD(Mchicha)\n20.02.25 - Truck  waiting to load\n21.02.25 - Truck loaded and Dispatch\n22.02.25 - Truck enroute to Tunduma border\n24/02/25 - Truck arrival Tunduma border Under RIT clearance",
+					"displayValue": "20.02.25 - Truck on the way to loading Location\n20.02.25 - Trucks arrival AFICD(Mchicha)\n20.02.25 - Truck  waiting to load\n21.02.25 - Truck loaded and Dispatch\n22.02.25 - Truck enroute to Tunduma border\n24/02/25 - Truck arrival Tunduma border Under RIT clearance"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		},
+		{
+			"id": 1743619254914948,
+			"rowNumber": 48,
+			"siblingId": 7373118789128068,
+			"expanded": true,
+			"createdAt": "2025-02-21T08:54:44Z",
+			"modifiedAt": "2025-02-26T09:37:58Z",
+			"cells": [
+				{
+					"columnId": 3404207790811012,
+					"value": 3329,
+					"displayValue": "3329"
+				},
+				{
+					"columnId": 3435349965334404,
+					"value": "Sulphur",
+					"displayValue": "Sulphur"
+				},
+				{
+					"columnId": 160862603896708,
+					"value": 31,
+					"displayValue": "31"
+				},
+				{
+					"columnId": 8323636928505732,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 3820037301135236,
+					"value": "NILL",
+					"displayValue": "NILL"
+				},
+				{
+					"columnId": 6071837114820484,
+					"value": "Loose Cargo",
+					"displayValue": "Loose Cargo"
+				},
+				{
+					"columnId": 1568237487449988,
+					"value": "Poseidon Logisticts",
+					"displayValue": "Poseidon Logisticts"
+				},
+				{
+					"columnId": 7197737021663108,
+					"value": "T339EGG",
+					"displayValue": "T339EGG"
+				},
+				{
+					"columnId": 2694137394292612,
+					"value": "T271EDS",
+					"displayValue": "T271EDS"
+				},
+				{
+					"columnId": 4945937207977860,
+					"value": "HAMISI AMINI MSUMARI",
+					"displayValue": "HAMISI AMINI MSUMARI"
+				},
+				{
+					"columnId": 442337580607364,
+					"value": "Waiting for RIT Clearance",
+					"displayValue": "Waiting for RIT Clearance"
+				},
+				{
+					"columnId": 8605111905216388,
+					"value": "Tunduma,Tanzania",
+					"displayValue": "Tunduma,Tanzania"
+				},
+				{
+					"columnId": 4101512277845892,
+					"value": "LCS,DRC",
+					"displayValue": "LCS,DRC"
+				},
+				{
+					"columnId": 6353312091531140,
+					"value": "2025-02-20"
+				},
+				{
+					"columnId": 1849712464160644,
+					"value": "2025-02-20"
+				},
+				{
+					"columnId": 7479211998373764,
+					"value": "2025-02-21"
+				},
+				{
+					"columnId": 2975612371003268,
+					"value": "2025-02-21"
+				},
+				{
+					"columnId": 5227412184688516,
+					"value": "2025-02-18"
+				},
+				{
+					"columnId": 723812557318020,
+					"value": "Tunduma IN - 24/02/25\nTunduma OUT -\n\nNakonde IN - \nNakonde OUT - \n\nKasumbalesa ZM IN - \nKasumbalesa ZM OUT - \n\nKasumbalesa DRC IN - \nKasumbalesa DRC OUT - \n\nWhiskey IN - \nWhiskey OUT -",
+					"displayValue": "Tunduma IN - 24/02/25\nTunduma OUT -\n\nNakonde IN - \nNakonde OUT - \n\nKasumbalesa ZM IN - \nKasumbalesa ZM OUT - \n\nKasumbalesa DRC IN - \nKasumbalesa DRC OUT - \n\nWhiskey IN - \nWhiskey OUT -"
+				},
+				{
+					"columnId": 8042161951795076
+				},
+				{
+					"columnId": 3538562324424580
+				},
+				{
+					"columnId": 5790362138109828
+				},
+				{
+					"columnId": 2412662417581956,
+					"value": "20.02.25 - Truck on the way to loading Location\n20.02.25 - Trucks arrival AFICD(Mchicha)\n20.02.25 - Truck  waiting to load\n21.02.25 - Truck loaded and Dispatch\n22.02.25 - Truck enroute to Tunduma border\n24/02/25 - Truck arrival Tunduma border Under RIT clearance",
+					"displayValue": "20.02.25 - Truck on the way to loading Location\n20.02.25 - Trucks arrival AFICD(Mchicha)\n20.02.25 - Truck  waiting to load\n21.02.25 - Truck loaded and Dispatch\n22.02.25 - Truck enroute to Tunduma border\n24/02/25 - Truck arrival Tunduma border Under RIT clearance"
+				},
+				{
+					"columnId": 1286762510739332
+				},
+				{
+					"columnId": 6916262044952452
+				},
+				{
+					"columnId": 4664462231267204,
+					"value": "Hesu Investment Ltd",
+					"displayValue": "Hesu Investment Ltd"
+				}
+			]
+		}
+	]
+}
