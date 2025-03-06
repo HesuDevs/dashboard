@@ -1,5 +1,6 @@
 "use client"
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const getMenuItems = (isAdmin) => {
@@ -23,10 +24,20 @@ export default function Sidebar() {
 
   return (
     <div className="fixed left-0 top-0 h-screen w-64 bg-white border-r border-gray-200">
-      <div className="p-4 border-b">
+      {/* Logo Section */}
+      <div className="p-4 flex flex-col items-center border-b">
+        <Image
+          src="/logo.png"
+          alt="Hesu Logo"
+          width={120}
+          height={120}
+          className="mb-2"
+        />
         <h1 className="text-xl font-bold text-blue-600">Hesu Tracking</h1>
-        <p className="text-sm text-gray-500 mt-1">{isAdmin ? 'Admin Portal' : 'Customer Portal'}</p>
+        <p className="text-sm text-gray-500 mt-1">In Transit</p>
       </div>
+
+      {/* Navigation Menu */}
       <nav className="p-4">
         {getMenuItems(isAdmin).map((item) => (
           <Link
