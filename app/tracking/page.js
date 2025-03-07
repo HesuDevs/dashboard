@@ -240,69 +240,154 @@ export default function SmartsheetData() {
           </button>
         </div>
       </div>
-      <div className="bg-white rounded-xl shadow-sm overflow-x-auto">
-        <table className="w-full">
-          <thead className="bg-gray-50">
-            <tr>
-              {visibleColumns.map((column) => (
-                <th
-                  key={column.id}
-                  onClick={() => handleSort(column.id)}
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100"
-                >
-                  <div className="flex items-center space-x-1">
-                    <span>{column.title}</span>
-                    {sortConfig.key === column.id && (
-                      <span>{sortConfig.direction === 'asc' ? '↑' : '↓'}</span>
-                    )}
-                  </div>
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200">
-            {filteredRows.map((row) => (
-              <tr 
-                key={row.id} 
-                onClick={() => router.push(`/tracking/${encodeURIComponent(row.id)}`)}
-                className="hover:bg-gray-50 cursor-pointer transition-colors duration-150"
-              >
-                {visibleColumns.map((column) => {
-                  const cell = row.cells.find(c => c.columnId === column.id);
-                  const value = cell?.displayValue || cell?.value || '-';
-                  
-                  if (column.type === 'DATE') {
-                    const date = value ? new Date(value).toLocaleDateString() : '-';
-                    return (
-                      <td key={column.id} className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        {date}
-                      </td>
-                    );
-                  }
+      {/* Table Section with Sticky Scrollbar */}
+      <div className="relative bg-white rounded-xl shadow-sm">
+        {/* Top Scrollbar - Sticky */}
+        <div 
+          className="sticky top-0 z-10 bg-white" 
+          style={{ 
+            padding: '8px 0',
+            borderTopLeftRadius: '0.75rem',
+            borderTopRightRadius: '0.75rem',
+          }}
+        >
+          <div 
+            className="scrollbar-container-top" 
+            style={{ overflowX: 'auto', overflowY: 'hidden', height: '16px', backgroundColor: '#e2e8f0' }}
+            onScroll={(e) => {
+              const mainTable = document.querySelector('.main-table');
+              if (mainTable) {
+                mainTable.scrollLeft = e.target.scrollLeft;
+              }
+            }}
+          >
+            <div style={{ width: '200%', height: '8px' }}></div>
+          </div>
+        </div>
 
-                  if (column.title === 'Truck Status') {
-                    return (
-                      <td key={column.id} className="px-6 py-4 whitespace-nowrap">
-                        <span className={`px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(value)}`}>
-                          {value}
-                        </span>
-                      </td>
-                    );
-                  }
+        {/* Table Container */}
+        <div className="overflow-x-auto main-table">
+          <style jsx>{`
+            .scrollbar-container-top {
+              overflow-x: auto;
+              overflow-y: hidden;
+              height: 16px;
+              background-color: #e2e8f0;
+              margin-bottom: -8px;
+              border-radius: 4px;
+            }
 
-                  return (
-                    <td
-                      key={column.id}
-                      className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
-                    >
-                      {value}
-                    </td>
-                  );
-                })}
+            .scrollbar-container-top::-webkit-scrollbar {
+              height: 8px;
+              background-color: #e2e8f0;
+              border-radius: 4px;
+            }
+
+            .scrollbar-container-top::-webkit-scrollbar-thumb {
+              background-color: #4a5568;
+              border-radius: 4px;
+              transition: background-color 0.2s ease;
+            }
+
+            .scrollbar-container-top::-webkit-scrollbar-thumb:hover {
+              background-color: #2d3748;
+            }
+
+            .scrollbar-container-top::-webkit-scrollbar-track {
+              background-color: #edf2f7;
+              border-radius: 4px;
+            }
+
+            .main-table {
+              overflow-x: auto;
+              overflow-y: visible;
+              margin-bottom: 4px;
+            }
+
+            .main-table::-webkit-scrollbar {
+              height: 8px;
+              background-color: #e2e8f0;
+              border-radius: 4px;
+            }
+
+            .main-table::-webkit-scrollbar-thumb {
+              background-color: #4a5568;
+              border-radius: 4px;
+              transition: background-color 0.2s ease;
+            }
+
+            .main-table::-webkit-scrollbar-thumb:hover {
+              background-color: #2d3748;
+            }
+
+            .main-table::-webkit-scrollbar-track {
+              background-color: #edf2f7;
+              border-radius: 4px;
+            }
+          `}</style>
+          <table className="w-full">
+            <thead className="bg-gray-50">
+              <tr>
+                {visibleColumns.map((column) => (
+                  <th
+                    key={column.id}
+                    onClick={() => handleSort(column.id)}
+                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100"
+                  >
+                    <div className="flex items-center space-x-1">
+                      <span>{column.title}</span>
+                      {sortConfig.key === column.id && (
+                        <span>{sortConfig.direction === 'asc' ? '↑' : '↓'}</span>
+                      )}
+                    </div>
+                  </th>
+                ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              {filteredRows.map((row) => (
+                <tr 
+                  key={row.id} 
+                  onClick={() => router.push(`/tracking/${encodeURIComponent(row.id)}`)}
+                  className="hover:bg-gray-50 cursor-pointer transition-colors duration-150"
+                >
+                  {visibleColumns.map((column) => {
+                    const cell = row.cells.find(c => c.columnId === column.id);
+                    const value = cell?.displayValue || cell?.value || '-';
+                    
+                    if (column.type === 'DATE') {
+                      const date = value ? new Date(value).toLocaleDateString() : '-';
+                      return (
+                        <td key={column.id} className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          {date}
+                        </td>
+                      );
+                    }
+
+                    if (column.title === 'Truck Status') {
+                      return (
+                        <td key={column.id} className="px-6 py-4 whitespace-nowrap">
+                          <span className={`px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(value)}`}>
+                            {value}
+                          </span>
+                        </td>
+                      );
+                    }
+
+                    return (
+                      <td
+                        key={column.id}
+                        className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
+                      >
+                        {value}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div className="flex justify-between items-center">

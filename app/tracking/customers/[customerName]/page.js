@@ -237,7 +237,79 @@ export default function CustomerDetail({ params }) {
 
       {showShareModal && <ShareModal />}
 
-      <div className="bg-white rounded-xl shadow-sm overflow-x-auto">
+      {/* Top Scrollbar */}
+      <div 
+        className="scrollbar-container-top sticky top-0 z-10" 
+        style={{ overflowX: 'auto', overflowY: 'hidden', height: '16px', backgroundColor: '#e2e8f0' }}
+        onScroll={(e) => {
+          const mainTable = document.querySelector('.main-table');
+          if (mainTable) {
+            mainTable.scrollLeft = e.target.scrollLeft;
+          }
+        }}
+      >
+        <div style={{ width: '200%', height: '8px' }}></div> {/* Ensure the width is greater than 100% to enable scrolling */}
+      </div>
+
+      {/* Table Container */}
+      <div className="bg-white rounded-xl shadow-sm overflow-x-auto main-table">
+        <style jsx>{`
+          .scrollbar-container-top {
+            overflow-x: auto;
+            overflow-y: hidden;
+            height: 16px;
+            background-color: #e2e8f0;
+            margin-bottom: -8px;
+          }
+
+          .scrollbar-container-top::-webkit-scrollbar {
+            height: 8px;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+          }
+
+          .scrollbar-container-top::-webkit-scrollbar-thumb {
+            background-color: #4a5568;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+          }
+
+          .scrollbar-container-top::-webkit-scrollbar-thumb:hover {
+            background-color: #2d3748;
+          }
+
+          .scrollbar-container-top::-webkit-scrollbar-track {
+            background-color: #edf2f7;
+            border-radius: 4px;
+          }
+
+          .main-table {
+            overflow-x: auto;
+            overflow-y: visible;
+            margin-bottom: 4px;
+          }
+
+          .main-table::-webkit-scrollbar {
+            height: 8px;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+          }
+
+          .main-table::-webkit-scrollbar-thumb {
+            background-color: #4a5568;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+          }
+
+          .main-table::-webkit-scrollbar-thumb:hover {
+            background-color: #2d3748;
+          }
+
+          .main-table::-webkit-scrollbar-track {
+            background-color: #edf2f7;
+            border-radius: 4px;
+          }
+        `}</style>
         <table className="w-full">
           <thead className="bg-gray-50">
             <tr>
