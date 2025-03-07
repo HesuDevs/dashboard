@@ -14,6 +14,12 @@ export default function SharedCustomerDashboard({ params }) {
   const [statusCounts, setStatusCounts] = useState({});
   const [searchTerm, setSearchTerm] = useState('');
   const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
+  const [showExportModal, setShowExportModal] = useState(false);
+  const [exportDateRange, setExportDateRange] = useState({
+    startDate: '',
+    endDate: '',
+    exportAll: true
+  });
 
   useEffect(() => {
     const fetchCustomerData = async () => {
@@ -118,14 +124,13 @@ export default function SharedCustomerDashboard({ params }) {
 
   // Add this new function to handle Excel export
   const exportToExcel = () => {
-    // Create data array for Excel
-    const excelData = filteredRows.map(row => {
+    const rowsToExport = filterRowsByDateRange(filteredRows);
+    const excelData = rowsToExport.map(row => {
       const rowData = {};
       visibleColumns.forEach(column => {
         const cell = row.cells.find(c => c.columnId === column.id);
         let value = cell?.displayValue || cell?.value || '-';
         
-        // Format date if it's a date column
         if (column.type === 'DATE' && value !== '-') {
           value = new Date(value).toLocaleDateString();
         }
@@ -135,18 +140,35 @@ export default function SharedCustomerDashboard({ params }) {
       return rowData;
     });
 
-    // Create worksheet
     const ws = XLSX.utils.json_to_sheet(excelData);
-    
-    // Create workbook
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Shipments');
 
-    // Generate filename with current date
-    const fileName = `shipments_${new Date().toISOString().split('T')[0]}.xlsx`;
+    const dateRangeStr = exportDateRange.exportAll ? 'all' : 
+      `${exportDateRange.startDate}_to_${exportDateRange.endDate}`;
+    const fileName = `shipments_${dateRangeStr}.xlsx`;
 
-    // Save file
     XLSX.writeFile(wb, fileName);
+    setShowExportModal(false);
+  };
+
+  // Add this function to filter rows by date range
+  const filterRowsByDateRange = (rows) => {
+    if (exportDateRange.exportAll) return rows;
+
+    return rows.filter(row => {
+      const cell = row.cells.find(c => c.columnId === columnMapping['Trip Start Date']);
+      const tripDate = cell?.value ? new Date(cell.value) : null;
+      if (!tripDate) return false;
+
+      const start = exportDateRange.startDate ? new Date(exportDateRange.startDate) : null;
+      const end = exportDateRange.endDate ? new Date(exportDateRange.endDate) : null;
+
+      if (start && end) {
+        return tripDate >= start && tripDate <= end;
+      }
+      return true;
+    });
   };
 
   if (loading) {
@@ -171,6 +193,86 @@ export default function SharedCustomerDashboard({ params }) {
     Object.values(columnMapping).includes(col.id)
   ) || [];
 
+  // Add the Export Modal Component
+  const ExportModal = () => (
+    <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+      <div className="bg-white rounded-lg p-6 w-96">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-lg font-semibold">Export Shipments</h3>
+          <button
+            onClick={() => setShowExportModal(false)}
+            className="text-gray-500 hover:text-gray-700"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div className="space-y-4">
+          <div className="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              id="exportAll"
+              checked={exportDateRange.exportAll}
+              onChange={(e) => setExportDateRange({
+                ...exportDateRange,
+                exportAll: e.target.checked
+              })}
+              className="rounded text-blue-600"
+            />
+            <label htmlFor="exportAll">Export all records</label>
+          </div>
+
+          {!exportDateRange.exportAll && (
+            <div className="space-y-3">
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Start Date</label>
+                <input
+                  type="date"
+                  value={exportDateRange.startDate}
+                  onChange={(e) => setExportDateRange({
+                    ...exportDateRange,
+                    startDate: e.target.value
+                  })}
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">End Date</label>
+                <input
+                  type="date"
+                  value={exportDateRange.endDate}
+                  onChange={(e) => setExportDateRange({
+                    ...exportDateRange,
+                    endDate: e.target.value
+                  })}
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                />
+              </div>
+            </div>
+          )}
+
+          <div className="flex justify-end space-x-3 mt-6">
+            <button
+              onClick={() => setShowExportModal(false)}
+              className="px-4 py-2 border rounded-lg hover:bg-gray-50"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={exportToExcel}
+              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center space-x-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>Export</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="p-6 max-w-7xl mx-auto space-y-6">
       <div className="flex justify-between items-center">
@@ -181,7 +283,7 @@ export default function SharedCustomerDashboard({ params }) {
         
         {/* Add Export Button */}
         <button
-          onClick={exportToExcel}
+          onClick={() => setShowExportModal(true)}
           className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center space-x-2"
         >
           <svg 
@@ -240,67 +342,151 @@ export default function SharedCustomerDashboard({ params }) {
         </div>
       </div>
 
-      {/* Shipments Table */}
-      <div className="bg-white rounded-xl shadow-sm overflow-x-auto">
-        <table className="w-full">
-          <thead className="bg-gray-50">
-            <tr>
-              {visibleColumns.map((column) => (
-                <th
-                  key={column.id}
-                  onClick={() => handleSort(column.id)}
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100"
-                >
-                  <div className="flex items-center space-x-1">
-                    <span>{column.title}</span>
-                    {sortConfig.key === column.id && (
-                      <span>{sortConfig.direction === 'asc' ? '↑' : '↓'}</span>
-                    )}
-                  </div>
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200">
-            {filteredRows.map((row) => (
-              <tr key={row.id} className="hover:bg-gray-50">
-                {visibleColumns.map((column) => {
-                  const cell = row.cells.find(c => c.columnId === column.id);
-                  const value = cell?.displayValue || cell?.value || '-';
-                  
-                  if (column.type === 'DATE') {
-                    const date = value ? new Date(value).toLocaleDateString() : '-';
-                    return (
-                      <td key={column.id} className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        {date}
-                      </td>
-                    );
-                  }
+      {/* Shipments Table with custom scrollbar */}
+      <div className="bg-white rounded-xl shadow-sm">
+        {/* Top Scrollbar */}
+        <div 
+          className="scrollbar-container-top" 
+          style={{ overflowX: 'auto', overflowY: 'hidden', height: '16px', backgroundColor: '#e2e8f0' }}
+          onScroll={(e) => {
+            const mainTable = document.querySelector('.main-table');
+            if (mainTable) {
+              mainTable.scrollLeft = e.target.scrollLeft;
+            }
+          }}
+        >
+          <div style={{ width: '200%', height: '8px' }}></div>
+        </div>
+        {/* Table Container */}
+        <div 
+          className="overflow-x-auto scrollbar-container main-table" 
+          onScroll={(e) => {
+            const topScrollbar = document.querySelector('.scrollbar-container-top');
+            if (topScrollbar) {
+              topScrollbar.scrollLeft = e.target.scrollLeft;
+            }
+          }}
+        >
+          <style jsx>{`
+            .scrollbar-container-top {
+              overflow-x: auto;
+              overflow-y: hidden;
+              height: 16px;
+              background-color: #e2e8f0;
+              margin-bottom: -8px;
+            }
 
-                  if (column.title === 'Truck Status') {
-                    return (
-                      <td key={column.id} className="px-6 py-4 whitespace-nowrap">
-                        <span className={`px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(value)}`}>
-                          {value}
-                        </span>
-                      </td>
-                    );
-                  }
+            .scrollbar-container-top::-webkit-scrollbar {
+              height: 8px;
+              background-color: #e2e8f0;
+              border-radius: 4px;
+            }
 
-                  return (
-                    <td
-                      key={column.id}
-                      className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
-                    >
-                      {value}
-                    </td>
-                  );
-                })}
+            .scrollbar-container-top::-webkit-scrollbar-thumb {
+              background-color: #4a5568;
+              border-radius: 4px;
+              transition: background-color 0.2s ease;
+            }
+
+            .scrollbar-container-top::-webkit-scrollbar-thumb:hover {
+              background-color: #2d3748;
+            }
+
+            .scrollbar-container-top::-webkit-scrollbar-track {
+              background-color: #edf2f7;
+              border-radius: 4px;
+            }
+
+            .main-table {
+              overflow-x: auto;
+              overflow-y: visible;
+              margin-bottom: 4px;
+            }
+
+            .main-table::-webkit-scrollbar {
+              height: 8px;
+              background-color: #e2e8f0;
+              border-radius: 4px;
+            }
+
+            .main-table::-webkit-scrollbar-thumb {
+              background-color: #4a5568;
+              border-radius: 4px;
+              transition: background-color 0.2s ease;
+            }
+
+            .main-table::-webkit-scrollbar-thumb:hover {
+              background-color: #2d3748;
+            }
+
+            .main-table::-webkit-scrollbar-track {
+              background-color: #edf2f7;
+              border-radius: 4px;
+            }
+          `}</style>
+          <table className="w-full min-w-max">
+            <thead className="bg-gray-50">
+              <tr>
+                {visibleColumns.map((column) => (
+                  <th
+                    key={column.id}
+                    onClick={() => handleSort(column.id)}
+                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100 sticky top-0 bg-gray-50"
+                  >
+                    <div className="flex items-center space-x-1">
+                      <span>{column.title}</span>
+                      {sortConfig.key === column.id && (
+                        <span>{sortConfig.direction === 'asc' ? '↑' : '↓'}</span>
+                      )}
+                    </div>
+                  </th>
+                ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              {filteredRows.map((row) => (
+                <tr key={row.id} className="hover:bg-gray-50">
+                  {visibleColumns.map((column) => {
+                    const cell = row.cells.find(c => c.columnId === column.id);
+                    const value = cell?.displayValue || cell?.value || '-';
+                    
+                    if (column.type === 'DATE') {
+                      const date = value ? new Date(value).toLocaleDateString() : '-';
+                      return (
+                        <td key={column.id} className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          {date}
+                        </td>
+                      );
+                    }
+
+                    if (column.title === 'Truck Status') {
+                      return (
+                        <td key={column.id} className="px-6 py-4 whitespace-nowrap">
+                          <span className={`px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(value)}`}>
+                            {value}
+                          </span>
+                        </td>
+                      );
+                    }
+
+                    return (
+                      <td
+                        key={column.id}
+                        className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
+                      >
+                        {value}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
+
+      {/* Add the modal to the main return statement */}
+      {showExportModal && <ExportModal />}
     </div>
   );
 } 
