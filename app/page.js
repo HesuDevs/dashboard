@@ -25,8 +25,6 @@ export default function Login() {
       email: 'evelina.ibrahim@hesu.co.tz',
       password: 'Hesu@2021'
     }
-
-    //evelina.ibrahim@hesu.co.tz
   ];
 
   const handleSubmit = (e) => {
