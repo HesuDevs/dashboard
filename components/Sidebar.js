@@ -85,7 +85,7 @@ export default function Sidebar() {
             </svg>
             {isExpanded && (
               <span className="ml-3 text-xl font-semibold text-gray-800">
-                CargoTrack
+                 In Transit
               </span>
             )}
           </div>
