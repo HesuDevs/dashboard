@@ -55,7 +55,7 @@ export default function Sidebar() {
     >
       <div className="flex flex-col h-full">
         {/* Toggle Button */}
-        <button
+        {/* <button
           onClick={() => setIsExpanded(!isExpanded)}
           className="absolute -right-3 top-8 bg-white rounded-full p-1.5 shadow-lg hover:bg-gray-100"
         >
@@ -74,7 +74,7 @@ export default function Sidebar() {
               d="M15 19l-7-7 7-7"
             />
           </svg>
-        </button>
+        </button> */}
 
         {/* Logo */}
         <div className={`p-6 ${isExpanded ? 'px-6' : 'px-4'}`}>
