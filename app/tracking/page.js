@@ -156,7 +156,7 @@ export default function SmartsheetData() {
               </svg>
             </div>
             <div className="ml-4">
-              <h3 className="text-lg font-medium text-gray-900">Total Unique Customers</h3>
+              <h3 className="text-lg font-medium text-gray-900">Total Customers</h3>
               <p className="text-3xl font-semibold text-blue-600">{uniqueCustomers}</p>
             </div>
           </div>

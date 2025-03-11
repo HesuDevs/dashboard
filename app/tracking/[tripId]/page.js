@@ -8,48 +8,9 @@ export default function TripDetail({ params }) {
     const tripId = decodeURIComponent(unwrappedParams.tripId);
     const router = useRouter();
     const [tripData, setTripData] = useState(null);
+    const [allColumns, setAllColumns] = useState([]);
     const [loading, setLoading] = useState(true);
-
-    // Update the columnMapping to include ALL columns
-    const columnMapping = {
-        // Shipment Details
-        'Shipment Order': 3404207790811012,
-        'Transport Company': 4664462231267204,
-        'Client Name': 1568237487449988,
-        'Trip Start Date': 6353312091531140,
-        'Trip End Date': 8323437928447876,
-        'Trip Duration': 5789838301077380,
-        
-        // Vehicle & Driver Details
-        'Truck Number': 7197737021663108,
-        'Driver Name': 4945937207977860,
-        'Driver Phone': 2693637394292612,
-        'Truck Status': 442337580607364,
-        
-        // Cargo Details
-        'Cargo Type': 3435349965334404,
-        'Container Number': 3820037301135236,
-        'Size': 6071837114820484,
-        'Tonnage': 160862603896708,
-        'Seal Number': 7479612834749316,
-        
-        // Route Information
-        'Origin': 5070062742105988,
-        'Current Location': 8605111905216388,
-        'Destination': 4101512277845892,
-        'Border Post': 1849712464160644,
-        'Distance': 7916012277531524,
-        
-        // Documentation
-        'Import Declaration': 3412412650161028,
-        'Export Declaration': 5664212463846276,
-        'RIT Number': 2130612836475780,
-        
-        // Additional Information
-        'Trip Updates': 2412662417581956,
-        'Comments': 4382787742894980,
-        'Last Updated': 6634587556580228
-    };
+    const [kpis, setKpis] = useState({});
 
     useEffect(() => {
         const fetchTripData = async () => {
@@ -65,6 +26,13 @@ export default function TripDetail({ params }) {
                 }
                 
                 setTripData(trip);
+                setAllColumns(data.columns || []);
+                
+                // Calculate KPIs after setting data
+                if (trip) {
+                    calculateKPIs(trip, data.columns);
+                }
+                
                 setLoading(false);
             } catch (error) {
                 console.error('Error fetching trip data:', error);
@@ -75,10 +43,131 @@ export default function TripDetail({ params }) {
         fetchTripData();
     }, [tripId]);
 
+    // Calculate KPIs from trip data
+    const calculateKPIs = (trip, columns) => {
+        const kpiData = {};
+        
+        // Find column IDs by title
+        const findColumnId = (title) => {
+            const column = columns.find(col => col.title === title);
+            return column ? column.id : null;
+        };
+        
+        // Get cell value helper
+        const getCellValueById = (columnId) => {
+            if (!columnId) return null;
+            const cell = trip.cells.find(c => c.columnId === columnId);
+            return cell?.displayValue || cell?.value || null;
+        };
+        
+        // Find important column IDs
+        const startDateId = findColumnId('Trip Start Date');
+        const endDateId = findColumnId('Trip End Date');
+        const distanceId = findColumnId('Distance');
+        const statusId = findColumnId('Truck Status');
+        const originId = findColumnId('Origin');
+        const destinationId = findColumnId('Destination');
+        
+        // Trip Duration calculation
+        if (startDateId && endDateId) {
+            const startDate = getCellValueById(startDateId);
+            const endDate = getCellValueById(endDateId);
+            
+            if (startDate) {
+                const start = new Date(startDate);
+                
+                if (endDate) {
+                    const end = new Date(endDate);
+                    if (!isNaN(start.getTime()) && !isNaN(end.getTime())) {
+                        const durationMs = end - start;
+                        const durationDays = Math.round(durationMs / (1000 * 60 * 60 * 24));
+                        kpiData.tripDuration = {
+                            value: durationDays,
+                            unit: 'days',
+                            label: 'Trip Duration'
+                        };
+                    }
+                } else {
+                    // If trip is not complete, calculate elapsed time
+                    const now = new Date();
+                    if (!isNaN(start.getTime())) {
+                        const elapsedMs = now - start;
+                        const elapsedDays = Math.round(elapsedMs / (1000 * 60 * 60 * 24));
+                        kpiData.elapsedTime = {
+                            value: elapsedDays,
+                            unit: 'days',
+                            label: 'Elapsed Time'
+                        };
+                    }
+                }
+            }
+        }
+        
+        // Delivery Status
+        if (statusId) {
+            const status = getCellValueById(statusId);
+            if (status) {
+                const isCompleted = status === 'Delivered';
+                const isInTransit = status.includes('Moving') || status.includes('Waiting');
+                
+                kpiData.deliveryStatus = {
+                    value: status,
+                    isCompleted,
+                    isInTransit,
+                    label: 'Delivery Status'
+                };
+            }
+        }
+        
+        // Journey Information
+        if (originId && destinationId) {
+            const origin = getCellValueById(originId);
+            const destination = getCellValueById(destinationId);
+            
+            if (origin && destination) {
+                kpiData.journey = {
+                    origin,
+                    destination,
+                    label: 'Journey'
+                };
+            }
+        }
+        
+        // Distance
+        if (distanceId) {
+            const distance = getCellValueById(distanceId);
+            if (distance && !isNaN(parseFloat(distance))) {
+                kpiData.distance = {
+                    value: parseFloat(distance),
+                    unit: 'km',
+                    label: 'Total Distance'
+                };
+            }
+        }
+        
+        setKpis(kpiData);
+    };
+
     // Helper function to get cell value by column ID
     const getCellValue = (columnId) => {
         const cell = tripData?.cells.find(c => c.columnId === columnId);
         return cell?.displayValue || cell?.value || '-';
+    };
+
+    // Helper function to get cell value with proper date formatting
+    const getFormattedCellValue = (column) => {
+        const cell = tripData?.cells.find(c => c.columnId === column.id);
+        const value = cell?.displayValue || cell?.value || '-';
+
+        if (column.type === 'DATE') {
+            if (value && value !== '-') {
+                const dateObj = new Date(value);
+                return !isNaN(dateObj.getTime()) ? dateObj.toLocaleString() : '-';
+            }
+            return '-';
+        }
+        
+        return value;
     };
 
     // Helper function to get status color
@@ -99,12 +188,6 @@ export default function TripDetail({ params }) {
         return statusColors[status] || 'bg-gray-100 text-gray-600';
     };
 
-    // Parse trip updates into array
-    const getTripUpdates = () => {
-        const updates = getCellValue(columnMapping['Trip Updates']);
-        return updates !== '-' ? updates.split('\n') : [];
-    };
-
     if (loading) {
         return (
             <div className="flex items-center justify-center min-h-screen">
@@ -123,8 +206,76 @@ export default function TripDetail({ params }) {
         );
     }
 
-    const status = getCellValue(columnMapping['Truck Status']);
+    // Find important columns
+    const getColumnByTitle = (title) => allColumns.find(col => col.title === title);
+    
+    const shipmentOrderColumn = getColumnByTitle('Shipment Order');
+    const clientNameColumn = getColumnByTitle('Client Name');
+    const transportCompanyColumn = getColumnByTitle('Transport Company');
+    const statusColumn = getColumnByTitle('Truck Status');
+    const lastUpdatedColumn = getColumnByTitle('Last Updated');
+    
+    const status = statusColumn ? getCellValue(statusColumn.id) : '-';
     const statusColorClass = getStatusColor(status);
+
+    // Group columns by category
+    const columnGroups = {
+        vehicleAndDriver: [
+            'Truck Number', 
+            'Driver Name', 
+            'Driver Phone'
+        ],
+        cargoDetails: [
+            'Cargo Type', 
+            'Container Number', 
+            'Size', 
+            'Tonnage', 
+            'Seal Number'
+        ],
+        routeAndLocation: [
+            'Origin', 
+            'Current Location', 
+            'Destination', 
+            'Border Post', 
+            'Distance'
+        ],
+        timing: [
+            'Trip Start Date', 
+            'Trip End Date', 
+            'Trip Duration'
+        ],
+        documentation: [
+            'Import Declaration', 
+            'Export Declaration', 
+            'RIT Number',
+            'Border Crossing Details'
+        ],
+        updates: [
+            'Trip Updates', 
+            'Comments',
+            'Remarks'
+        ]
+    };
+
+    // Function to check if column belongs to a group
+    const getColumnGroup = (columnTitle) => {
+        for (const [group, titles] of Object.entries(columnGroups)) {
+            if (titles.includes(columnTitle)) {
+                return group;
+            }
+        }
+        return 'other';
+    };
+
+    // Organize columns by group
+    const groupedColumns = {};
+    allColumns.forEach(column => {
+        const group = getColumnGroup(column.title);
+        if (!groupedColumns[group]) {
+            groupedColumns[group] = [];
+        }
+        groupedColumns[group].push(column);
+    });
 
     return (
         <div className="min-h-screen bg-gray-50 p-6">
@@ -139,171 +290,210 @@ export default function TripDetail({ params }) {
                 Back to Tracking
             </button>
 
-            {/* Enhanced Trip Header */}
+            {/* Trip Header */}
             <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
                 <div className="flex justify-between items-start">
                     <div>
                         <h1 className="text-2xl font-bold text-gray-900">
-                            Shipment Order: {getCellValue(columnMapping['Shipment Order'])}
+                            Shipment Order: {shipmentOrderColumn ? getCellValue(shipmentOrderColumn.id) : tripId}
                         </h1>
                         <div className="mt-2 space-y-1">
-                            <p className="text-gray-600">
-                                Client: {getCellValue(columnMapping['Client Name'])}
-                            </p>
-                            <p className="text-gray-600">
-                                Transport Company: {getCellValue(columnMapping['Transport Company'])}
-                            </p>
-                            <p className="text-gray-600">
-                                Last Updated: {new Date(getCellValue(columnMapping['Last Updated'])).toLocaleString()}
-                            </p>
+                            {clientNameColumn && (
+                                <p className="text-gray-600">
+                                    Client: {getCellValue(clientNameColumn.id)}
+                                </p>
+                            )}
+                            {transportCompanyColumn && (
+                                <p className="text-gray-600">
+                                    Transport Company: {getCellValue(transportCompanyColumn.id)}
+                                </p>
+                            )}
+                            {lastUpdatedColumn && (
+                                <p className="text-gray-600">
+                                    Last Updated: {getFormattedCellValue(lastUpdatedColumn)}
+                                </p>
+                            )}
                         </div>
                     </div>
-                    <div className={`px-4 py-2 rounded-full ${getStatusColor(getCellValue(columnMapping['Truck Status']))}`}>
-                        {getCellValue(columnMapping['Truck Status'])}
-                    </div>
+                    {statusColumn && (
+                        <div className={`px-4 py-2 rounded-full ${statusColorClass}`}>
+                            {status}
+                        </div>
+                    )}
                 </div>
             </div>
 
-            {/* Main Content Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                {/* Vehicle & Driver Information */}
-                <div className="bg-white rounded-xl shadow-sm p-6">
-                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Vehicle & Driver Information</h2>
-                    <div className="space-y-3">
-                        <div>
-                            <label className="text-sm text-gray-500">Truck Number</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Truck Number'])}</p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">Driver Name</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Driver Name'])}</p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">Driver Phone</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Driver Phone'])}</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Cargo Information */}
-                <div className="bg-white rounded-xl shadow-sm p-6">
-                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Cargo Information</h2>
-                    <div className="space-y-3">
-                        <div>
-                            <label className="text-sm text-gray-500">Cargo Type</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Cargo Type'])}</p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">Container Number</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Container Number'])}</p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">Size</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Size'])}</p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">Tonnage</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Tonnage'])}</p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">Seal Number</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Seal Number'])}</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Route Information */}
-                <div className="bg-white rounded-xl shadow-sm p-6">
-                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Route Information</h2>
-                    <div className="space-y-3">
-                        <div>
-                            <label className="text-sm text-gray-500">Origin</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Origin'])}</p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">Current Location</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Current Location'])}</p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">Destination</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Destination'])}</p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">Border Post</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Border Post'])}</p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">Distance</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Distance'])} km</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Trip Timing */}
-                <div className="bg-white rounded-xl shadow-sm p-6">
-                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Trip Timing</h2>
-                    <div className="space-y-3">
-                        <div>
-                            <label className="text-sm text-gray-500">Start Date</label>
-                            <p className="text-gray-900 font-medium">
-                                {new Date(getCellValue(columnMapping['Trip Start Date'])).toLocaleString()}
-                            </p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">End Date</label>
-                            <p className="text-gray-900 font-medium">
-                                {getCellValue(columnMapping['Trip End Date']) !== '-' 
-                                    ? new Date(getCellValue(columnMapping['Trip End Date'])).toLocaleString()
-                                    : '-'}
-                            </p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">Duration</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Trip Duration'])}</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Documentation */}
-                <div className="bg-white rounded-xl shadow-sm p-6">
-                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Documentation</h2>
-                    <div className="space-y-3">
-                        <div>
-                            <label className="text-sm text-gray-500">Import Declaration</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Import Declaration'])}</p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">Export Declaration</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['Export Declaration'])}</p>
-                        </div>
-                        <div>
-                            <label className="text-sm text-gray-500">RIT Number</label>
-                            <p className="text-gray-900 font-medium">{getCellValue(columnMapping['RIT Number'])}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Comments Section */}
+            {/* KPI Dashboard */}
             <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
-                <h2 className="text-lg font-semibold mb-4 text-gray-900">Comments</h2>
-                <p className="text-gray-700 whitespace-pre-wrap">{getCellValue(columnMapping['Comments'])}</p>
-            </div>
-
-            {/* Trip Updates Timeline */}
-            <div className="bg-white rounded-xl shadow-sm p-6">
-                <h2 className="text-lg font-semibold mb-4 text-gray-900">Trip Updates</h2>
-                <div className="space-y-4">
-                    {getTripUpdates().map((update, index) => (
-                        <div key={index} className="flex items-start">
-                            <div className="flex-shrink-0 h-4 w-4 rounded-full bg-blue-500 mt-2"></div>
-                            <div className="ml-4">
-                                <p className="text-gray-900">{update}</p>
-                            </div>
+                <h2 className="text-lg font-semibold mb-4 text-gray-900">Key Performance Indicators</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {kpis.tripDuration && (
+                        <div className="bg-blue-50 p-4 rounded-lg">
+                            <h3 className="text-sm font-medium text-blue-800">Trip Duration</h3>
+                            <p className="text-2xl font-bold text-blue-600">{kpis.tripDuration.value} {kpis.tripDuration.unit}</p>
                         </div>
-                    ))}
+                    )}
+                    
+                    {kpis.elapsedTime && !kpis.tripDuration && (
+                        <div className="bg-blue-50 p-4 rounded-lg">
+                            <h3 className="text-sm font-medium text-blue-800">Time Elapsed</h3>
+                            <p className="text-2xl font-bold text-blue-600">{kpis.elapsedTime.value} {kpis.elapsedTime.unit}</p>
+                        </div>
+                    )}
+                    
+                    {kpis.deliveryStatus && (
+                        <div className={`p-4 rounded-lg ${kpis.deliveryStatus.isCompleted ? 'bg-green-50' : 'bg-yellow-50'}`}>
+                            <h3 className={`text-sm font-medium ${kpis.deliveryStatus.isCompleted ? 'text-green-800' : 'text-yellow-800'}`}>
+                                Status
+                            </h3>
+                            <p className={`text-2xl font-bold ${kpis.deliveryStatus.isCompleted ? 'text-green-600' : 'text-yellow-600'}`}>
+                                {kpis.deliveryStatus.value}
+                            </p>
+                        </div>
+                    )}
+                    
+                    {kpis.distance && (
+                        <div className="bg-purple-50 p-4 rounded-lg">
+                            <h3 className="text-sm font-medium text-purple-800">Total Distance</h3>
+                            <p className="text-2xl font-bold text-purple-600">{kpis.distance.value} {kpis.distance.unit}</p>
+                        </div>
+                    )}
+                    
+                    {kpis.journey && (
+                        <div className="bg-indigo-50 p-4 rounded-lg col-span-3">
+                            <h3 className="text-sm font-medium text-indigo-800">Journey</h3>
+                            <p className="text-xl font-bold text-indigo-600">
+                                {kpis.journey.origin} → {kpis.journey.destination}
+                            </p>
+                        </div>
+                    )}
                 </div>
             </div>
+
+            {/* Vehicle & Driver Information */}
+            {groupedColumns.vehicleAndDriver && groupedColumns.vehicleAndDriver.length > 0 && (
+                <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
+                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Vehicle & Driver Information</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {groupedColumns.vehicleAndDriver.map(column => (
+                            <div key={column.id} className="space-y-1">
+                                <label className="text-sm text-gray-500">{column.title}</label>
+                                <p className="text-gray-900 font-medium">
+                                    {getFormattedCellValue(column)}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Cargo Details */}
+            {groupedColumns.cargoDetails && groupedColumns.cargoDetails.length > 0 && (
+                <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
+                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Cargo Details</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {groupedColumns.cargoDetails.map(column => (
+                            <div key={column.id} className="space-y-1">
+                                <label className="text-sm text-gray-500">{column.title}</label>
+                                <p className="text-gray-900 font-medium">
+                                    {getFormattedCellValue(column)}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Route Information */}
+            {groupedColumns.routeAndLocation && groupedColumns.routeAndLocation.length > 0 && (
+                <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
+                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Route Information</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {groupedColumns.routeAndLocation.map(column => (
+                            <div key={column.id} className="space-y-1">
+                                <label className="text-sm text-gray-500">{column.title}</label>
+                                <p className="text-gray-900 font-medium">
+                                    {getFormattedCellValue(column)}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Trip Timing */}
+            {groupedColumns.timing && groupedColumns.timing.length > 0 && (
+                <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
+                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Trip Timing</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {groupedColumns.timing.map(column => (
+                            <div key={column.id} className="space-y-1">
+                                <label className="text-sm text-gray-500">{column.title}</label>
+                                <p className="text-gray-900 font-medium">
+                                    {getFormattedCellValue(column)}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Documentation */}
+            {groupedColumns.documentation && groupedColumns.documentation.length > 0 && (
+                <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
+                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Documentation</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {groupedColumns.documentation.map(column => (
+                            <div key={column.id} className="space-y-1">
+                                <label className="text-sm text-gray-500">{column.title}</label>
+                                {column.title === 'Border Crossing Details' ? (
+                                    <p className="text-gray-900 font-medium whitespace-pre-wrap">
+                                        {getFormattedCellValue(column)}
+                                    </p>
+                                ) : (
+                                    <p className="text-gray-900 font-medium">
+                                        {getFormattedCellValue(column)}
+                                    </p>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Trip Updates & Comments */}
+            {groupedColumns.updates && groupedColumns.updates.length > 0 && (
+                <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
+                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Trip Updates & Comments</h2>
+                    <div className="space-y-4">
+                        {groupedColumns.updates.map(column => (
+                            <div key={column.id} className="space-y-1">
+                                <label className="text-sm text-gray-500">{column.title}</label>
+                                <p className="text-gray-900 font-medium whitespace-pre-wrap">
+                                    {getFormattedCellValue(column)}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Other Information */}
+            {groupedColumns.other && groupedColumns.other.length > 0 && (
+                <div className="bg-white rounded-xl shadow-sm p-6">
+                    <h2 className="text-lg font-semibold mb-4 text-gray-900">Additional Information</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {groupedColumns.other.map(column => (
+                            <div key={column.id} className="space-y-1">
+                                <label className="text-sm text-gray-500">{column.title}</label>
+                                <p className="text-gray-900 font-medium">
+                                    {getFormattedCellValue(column)}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
         </div>
     );
 } 

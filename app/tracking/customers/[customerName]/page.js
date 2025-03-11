@@ -170,24 +170,8 @@ export default function CustomerDetail({ params }) {
     );
   }
 
-  // Column IDs from sample.json
-  const columnMapping = {
-    'Shipment Order': 3404207790811012,
-    'Cargo Type': 3435349965334404,
-    'Tonnage': 160862603896708,
-    'Container Number': 3820037301135236,
-    'Size': 6071837114820484,
-    'Truck Number': 7197737021663108,
-    'Driver Name': 4945937207977860,
-    'Truck Status': 442337580607364,
-    'Current Location': 8605111905216388,
-    'Destination': 4101512277845892,
-    'Trip Start Date': 6353312091531140,
-  };
-
-  const visibleColumns = sheetData.columns?.filter(col => 
-    Object.values(columnMapping).includes(col.id)
-  ) || [];
+  // Use all columns from the API response instead of filtering
+  const visibleColumns = sheetData.columns || [];
 
   return (
     <div className="space-y-6">
@@ -337,7 +321,13 @@ export default function CustomerDetail({ params }) {
                   const value = cell?.displayValue || cell?.value || '-';
                   
                   if (column.type === 'DATE') {
-                    const date = value ? new Date(value).toLocaleDateString() : '-';
+                    let date = '-';
+                    if (value && value !== '-') {
+                      const dateObj = new Date(value);
+                      // Check if the date is valid before formatting
+                      date = !isNaN(dateObj.getTime()) ? dateObj.toLocaleDateString() : '-';
+                    }
+                    
                     return (
                       <td key={column.id} className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {date}
@@ -351,6 +341,23 @@ export default function CustomerDetail({ params }) {
                         <span className={`px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(value)}`}>
                           {value}
                         </span>
+                      </td>
+                    );
+                  }
+                  
+                  // Truncate long text in Border Crossing Details and Remarks columns
+                  if (column.title === 'Border Crossing Details' || column.title === 'Remarks') {
+                    const truncatedValue = typeof value === 'string' && value.length > 50
+                      ? value.substring(0, 50) + '...'
+                      : value;
+                    
+                    return (
+                      <td
+                        key={column.id}
+                        className="px-6 py-4 whitespace-nowrap text-sm text-gray-900"
+                        title={value} // Show full content on hover
+                      >
+                        {truncatedValue}
                       </td>
                     );
                   }
